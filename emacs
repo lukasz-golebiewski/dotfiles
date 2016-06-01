@@ -3,7 +3,10 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade.ferrier.me.uk/packages/"))
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
+
 (package-initialize)
+
+(setq debug-on-error t)
 
 ;; mandatory modules installation
 
@@ -19,10 +22,13 @@
     (packages-conditional-install (cdr packages))))
 
 (packages-conditional-install
- '(ensime scala-mode2 magit git-gutter neotree zoom-frm ace-window avy csv-mode
+ '(ensime magit git-gutter neotree zoom-frm ace-window avy csv-mode
 	  elmacro key-chord multiple-cursors annoying-arrows-mode restclient smartparens
 	  auto-package-update org which-key undo-tree bind-key projectile ag helm-ag helm-projectile
+	  nyan-mode yasnippet monokai-theme
 ))
+
+(load-theme 'monokai t)
 
 (when (not package-archive-contents)
   (package-refresh-contents))
@@ -103,10 +109,6 @@
 (annoying-arrows-mode 1)
 (elmacro-mode 1)
 
-;; Change font size globally:
-(set-face-attribute 'default nil :height 110)
-;;(set-default-font "Terminus-9")
-
 ;; This is bound to f11 in Emacs 24.4
 (toggle-frame-fullscreen)
 ;; Who uses the bar to scroll?
@@ -117,9 +119,8 @@
 (which-key-mode)
 (global-undo-tree-mode 1)
 
-(require 'vlf-setup)
-
-(setq line-move-visual nil)
+;;(require 'vlf-setup)
+;;(setq line-move-visual nil)
 
 ;; custom kbd mappings
 (global-set-key (kbd "C-s-c C-s-c") 'mc/edit-lines)
@@ -146,6 +147,7 @@
 (global-set-key (kbd "C-c [") 'previous-buffer)
 (global-set-key (kbd "C-c ]") 'next-buffer)
 
+(require 'key-chord)
 (key-chord-mode 1)
 (key-chord-define-global "sw" 'ace-swap-window)
 (key-chord-define-global "fg" 'helm-do-ag-project-root)
@@ -186,3 +188,23 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (require 'nyan-mode)
+(nyan-mode 1)
+
+(require 'yasnippet)
+(yas-global-mode 1)
+
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
+
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+(el-get 'sync)
+
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:setup-keys t)                      ; optional
+(setq jedi:complete-on-dot t)                 ; optional
