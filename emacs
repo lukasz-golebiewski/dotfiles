@@ -22,7 +22,7 @@
     (packages-conditional-install (cdr packages))))
 
 (packages-conditional-install
- '(ensime magit git-gutter neotree zoom-frm ace-window avy csv-mode
+ '(ensime scala-mode magit git-gutter neotree zoom-frm ace-window avy csv-mode
 	  elmacro key-chord multiple-cursors annoying-arrows-mode restclient smartparens
 	  auto-package-update org which-key undo-tree bind-key projectile ag helm-ag helm-projectile
 	  nyan-mode yasnippet monokai-theme
