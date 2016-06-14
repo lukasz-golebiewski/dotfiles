@@ -126,7 +126,7 @@
 (global-set-key (kbd "C-s-c C-s-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-c C-m") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-x C-m") 'magit-status)
 (global-set-key (kbd "C-x R") 'magit-ediff-resolve)
 (global-set-key (kbd "C-c /") 'toggle-comment-on-line)
