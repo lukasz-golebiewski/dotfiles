@@ -151,8 +151,9 @@
 (key-chord-mode 1)
 (key-chord-define-global "sw" 'ace-swap-window)
 (key-chord-define-global "fg" 'helm-do-ag-project-root)
-(key-chord-define-global "rs" 'replace-string)
 (key-chord-define-global "cd" 'double-line)
+(key-chord-define-global "r[" 'replace-string)
+(key-chord-define-global "r]" 'projectile-replace-regexp)
 
 (require 'eno)
 ;;(global-set-key (kbd "M-s") 'eno-word-goto)
