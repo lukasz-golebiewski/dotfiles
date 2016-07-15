@@ -21,11 +21,15 @@
     (package-conditional-install (car packages))
     (packages-conditional-install (cdr packages))))
 
+(require 'use-package)
+(use-package ensime
+	     :pin melpa-stable)
+
 (packages-conditional-install
- '(ensime scala-mode magit git-gutter neotree zoom-frm ace-window avy csv-mode
-	  elmacro key-chord multiple-cursors annoying-arrows-mode restclient smartparens
-	  auto-package-update org which-key undo-tree bind-key projectile ag helm-ag helm-projectile
-	  nyan-mode yasnippet monokai-theme
+ '(use-package ensime magit git-gutter neotree ace-window avy csv-mode
+	  elmacro key-chord multiple-cursors annoying-arrows-mode smartparens
+	  auto-package-update org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile
+	  nyan-mode yasnippet monokai-theme zoom-frm eno
 ))
 
 (load-theme 'monokai t)
