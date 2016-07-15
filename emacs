@@ -1,5 +1,6 @@
 ;; the repositories
 (require 'package)
+(add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade.ferrier.me.uk/packages/"))
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
@@ -9,7 +10,6 @@
 (setq debug-on-error t)
 
 ;; mandatory modules installation
-
 (defun package-conditional-install (package-name)
   "Installs a package if it is not present"
   (unless (package-installed-p package-name)
