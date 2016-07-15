@@ -29,7 +29,7 @@
  '(use-package ensime magit git-gutter neotree ace-window avy csv-mode
 	  elmacro key-chord multiple-cursors annoying-arrows-mode smartparens
 	  auto-package-update org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile
-	  nyan-mode yasnippet monokai-theme zoom-frm eno
+	  nyan-mode yasnippet monokai-theme zoom-frm eno vlf
 ))
 
 (load-theme 'monokai t)
@@ -123,7 +123,7 @@
 (which-key-mode)
 (global-undo-tree-mode 1)
 
-;;(require 'vlf-setup)
+(require 'vlf-setup)
 ;;(setq line-move-visual nil)
 
 ;; custom kbd mappings
