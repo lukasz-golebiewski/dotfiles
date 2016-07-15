@@ -124,7 +124,7 @@
 (global-undo-tree-mode 1)
 
 (require 'vlf-setup)
-;;(setq line-move-visual nil)
+(setq line-move-visual nil)
 
 ;; custom kbd mappings
 (global-set-key (kbd "C-s-c C-s-c") 'mc/edit-lines)
