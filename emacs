@@ -29,7 +29,7 @@
  '(use-package ensime magit git-gutter neotree ace-window avy csv-mode
 	  elmacro key-chord multiple-cursors annoying-arrows-mode smartparens
 	  auto-package-update org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile
-	  nyan-mode yasnippet monokai-theme zoom-frm eno vlf
+	  nyan-mode yasnippet monokai-theme zoom-frm eno vlf markdown-mode
 ))
 
 (load-theme 'monokai t)
