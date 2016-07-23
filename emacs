@@ -213,6 +213,7 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:setup-keys t)                      ; optional
 (setq jedi:complete-on-dot t)                 ; optional
+(setq python-shell-interpreter "python3")
 
 (global-set-key (kbd "S-C-l") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-h") 'enlarge-window-horizontally)
