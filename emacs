@@ -29,7 +29,7 @@
  '(use-package ensime magit git-gutter neotree ace-window avy csv-mode
 	  elmacro key-chord multiple-cursors annoying-arrows-mode smartparens
 	  auto-package-update org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile
-	  nyan-mode yasnippet monokai-theme zoom-frm eno vlf markdown-mode
+	  nyan-mode yasnippet monokai-theme zoom-frm eno vlf markdown-mode evil
 ))
 
 (load-theme 'monokai t)
@@ -221,3 +221,6 @@
 (global-set-key (kbd "S-C-k") 'enlarge-window)
 
 (global-set-key (kbd "C-c u") 'undo-tree-visualize)
+
+(require 'evil)
+(evil-mode 1)
