@@ -247,3 +247,6 @@
 
 (require 'evil)
 (evil-mode 1)
+
+(global-set-key (kbd "M-'") 'ensime-edit-definition)
+(global-set-key (kbd "M-;") 'ensime-pop-find-definition-stack)
