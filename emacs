@@ -245,8 +245,10 @@
 
 (global-set-key (kbd "C-c u") 'undo-tree-visualize)
 
+;; see no evil
 (require 'evil)
 (evil-mode 1)
+(key-chord-define evil-insert-state-map  "gg" 'evil-normal-state)
 
 (global-set-key (kbd "M-'") 'ensime-edit-definition)
 (global-set-key (kbd "M-;") 'ensime-pop-find-definition-stack)
