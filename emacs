@@ -173,6 +173,11 @@
 (global-set-key (kbd "C-.") 'goto-last-change)
 (global-set-key (kbd "C-c [") 'previous-buffer)
 (global-set-key (kbd "C-c ]") 'next-buffer)
+(global-set-key (kbd "S-C-l") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-h") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-j") 'shrink-window)
+(global-set-key (kbd "S-C-k") 'enlarge-window)
+(global-set-key (kbd "C-c u") 'undo-tree-visualize)
 
 (require 'key-chord)
 (key-chord-mode 1)
@@ -183,7 +188,6 @@
 (key-chord-define-global "r]" 'projectile-replace-regexp)
 
 (require 'eno)
-;;(global-set-key (kbd "M-s") 'eno-word-goto)
 (key-chord-define-global "jk" 'eno-word-goto)
 
 (defun toggle-window-split ()
@@ -233,17 +237,11 @@
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 (el-get 'sync)
 
+;; python
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:setup-keys t)                      ; optional
 (setq jedi:complete-on-dot t)                 ; optional
 (setq python-shell-interpreter "python3")
-
-(global-set-key (kbd "S-C-l") 'shrink-window-horizontally)
-(global-set-key (kbd "S-C-h") 'enlarge-window-horizontally)
-(global-set-key (kbd "S-C-j") 'shrink-window)
-(global-set-key (kbd "S-C-k") 'enlarge-window)
-
-(global-set-key (kbd "C-c u") 'undo-tree-visualize)
 
 ;; see no evil
 (require 'evil)
