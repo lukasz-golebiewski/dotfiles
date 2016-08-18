@@ -52,7 +52,7 @@
  '(use-package ensime magit git-gutter neotree ace-window avy csv-mode
 	  elmacro key-chord multiple-cursors annoying-arrows-mode smartparens
 	  auto-package-update org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile
-	  nyan-mode yasnippet monokai-theme zoom-frm eno vlf markdown-mode evil git-timemachine haskell-mode
+	  nyan-mode yasnippet monokai-theme zoom-frm eno vlf markdown-mode evil git-timemachine haskell-mode evil-magit
 ))
 
 (load-theme 'monokai t)
@@ -268,3 +268,9 @@
 (defun my-haskell-mode-hook ()
   (local-set-key (kbd "C-c C-r") 'inferior-haskell-load-and-run))
 (add-hook 'haskell-mode-hook 'my-haskell-mode-hook)
+
+;; optional: this is the evil state that evil-magit will use
+;; (setq evil-magit-state 'normal)
+;; optional: disable additional bindings for yanking text
+;; (setq evil-magit-use-y-for-yank nil)
+(require 'evil-magit)
