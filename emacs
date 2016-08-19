@@ -248,8 +248,8 @@
 (evil-mode 1)
 (key-chord-define evil-insert-state-map  "gg" 'evil-normal-state)
 
-(global-set-key (kbd "M-'") 'ensime-edit-definition)
-(global-set-key (kbd "M-;") 'ensime-pop-find-definition-stack)
+(global-set-key (kbd "C-c l") 'ensime-edit-definition)
+(global-set-key (kbd "C-c h") 'ensime-pop-find-definition-stack)
 
 (add-hook 'neotree-mode-hook
   (lambda ()
