@@ -7,7 +7,9 @@
  scroll-error-top-bottom t
  show-paren-delay 0.5
  use-package-always-ensure t
- sentence-end-double-space nil)
+ sentence-end-double-space nil
+ x-select-enable-clipboard t
+)
 
 ;; buffer local variables
 (setq-default
