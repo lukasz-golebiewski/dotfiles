@@ -66,7 +66,7 @@
 	  elmacro key-chord multiple-cursors annoying-arrows-mode smartparens
 	  auto-package-update org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile
 	  nyan-mode yasnippet monokai-theme zoom-frm eno vlf markdown-mode evil git-timemachine haskell-mode evil-magit
-      suggest
+      suggest helm-spotify
 ))
 
 (load-theme 'monokai t)
@@ -192,6 +192,7 @@
 (global-set-key (kbd "S-C-j") 'shrink-window)
 (global-set-key (kbd "S-C-k") 'enlarge-window)
 (global-set-key (kbd "C-c u") 'undo-tree-visualize)
+(global-set-key (kbd "C-c C-s") 'helm-spotify)
 
 (require 'key-chord)
 (key-chord-mode 1)
@@ -249,7 +250,6 @@
 (require 'evil)
 (evil-mode 1)
 (key-chord-define evil-insert-state-map  "ff" 'evil-normal-state)
-
 (global-set-key (kbd "C-c l") 'ensime-edit-definition)
 (global-set-key (kbd "C-c h") 'ensime-pop-find-definition-stack)
 
