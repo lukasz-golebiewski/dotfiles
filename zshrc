@@ -104,3 +104,8 @@ if command -v tmux>/dev/null; then
   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
 
+# set PATH so it includes git bin if it exists
+if [ -d "$GIT_MY/utils/bin" ] ; then
+  PATH="$GIT_MY/utils/bin:$PATH"
+fi
+
