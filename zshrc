@@ -89,9 +89,12 @@ if [ -f ~/.bash_aliases ]; then
 else
     print "404: ~/.bash_aliases not found."
 fi
+export GIT=~/git
+export GIT_MY=$GIT/my
+
 alias fuck='TF_CMD=$(TF_ALIAS=fuck PYTHONIOENCODING=utf-8 TF_SHELL_ALIASES=$(alias) thefuck $(fc -ln -1 | tail -n 1)) && eval $TF_CMD && print -s $TF_CMD'
-alias cdmy='cd ~/git/my'
-alias cdgwi='cd ~/git/gwi'
+alias cdmy='cd $GIT_MY'
+alias cdgwi='cd $GIT/gwi'
 
 export TERM=xterm-256color
 export JAVA_OPTS="-Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MetaspaceSize=512m"
