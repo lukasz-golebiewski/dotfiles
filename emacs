@@ -192,7 +192,7 @@
 (global-set-key (kbd "S-C-j") 'shrink-window)
 (global-set-key (kbd "S-C-k") 'enlarge-window)
 (global-set-key (kbd "C-c u") 'undo-tree-visualize)
-(global-set-key (kbd "C-c C-s") 'helm-spotify)
+(global-set-key (kbd "C-c s") 'helm-spotify)
 
 (require 'key-chord)
 (key-chord-mode 1)
