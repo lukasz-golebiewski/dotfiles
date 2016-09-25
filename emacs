@@ -178,7 +178,6 @@
 (global-set-key (kbd "C-c f g") 'find-grep)
 (global-set-key (kbd "C-c j") 'avy-goto-subword-1)
 (global-set-key (kbd "C-x o") 'ace-window)
-(global-set-key (kbd "C-c C-s s") 'ace-swap-window)
 (global-set-key (kbd "C-c C-s m") 'ace-maximize-window)
 (global-set-key (kbd "C-c r") 'revert-buffer)
 (global-set-key (kbd "C-c n") 'neotree-find)
