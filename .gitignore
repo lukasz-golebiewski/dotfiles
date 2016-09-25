@@ -1,0 +1,5 @@
+# sbt
+sbt/boot
+sbt/launchers
+sbt/**/target
+
