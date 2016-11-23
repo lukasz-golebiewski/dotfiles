@@ -67,7 +67,7 @@
 	  ;;auto-package-update
 	  org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile
 	  nyan-mode yasnippet monokai-theme zoom-frm eno vlf markdown-mode evil git-timemachine haskell-mode evil-magit
-          suggest helm-spotify
+          suggest helm-spotify evil-surround
 ))
 
 (load-theme 'monokai t)
@@ -261,6 +261,14 @@
     (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
   )
 )
+;; optional: this is the evil state that evil-magit will use
+;; (setq evil-magit-state 'normal)
+;; optional: disable additional bindings for yanking text
+;; (setq evil-magit-use-y-for-yank nil)
+(require 'evil-magit)
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+
 ;; haskell
 (eval-after-load "haskell-mode"
     '(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile))
@@ -270,9 +278,3 @@
 (defun my-haskell-mode-hook ()
   (local-set-key (kbd "C-c C-r") 'inferior-haskell-load-and-run))
 (add-hook 'haskell-mode-hook 'my-haskell-mode-hook)
-
-;; optional: this is the evil state that evil-magit will use
-;; (setq evil-magit-state 'normal)
-;; optional: disable additional bindings for yanking text
-;; (setq evil-magit-use-y-for-yank nil)
-(require 'evil-magit)
