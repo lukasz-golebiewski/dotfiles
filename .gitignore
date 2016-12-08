@@ -2,4 +2,8 @@
 sbt/boot
 sbt/launchers
 sbt/**/target
+sbt/**/staging
+
+# emacs
+.emacs.desktop
 
