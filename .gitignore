@@ -6,4 +6,5 @@ sbt/**/staging
 
 # emacs
 .emacs.desktop
+emacs.d
 
