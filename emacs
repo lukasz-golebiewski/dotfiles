@@ -67,7 +67,7 @@
 	  ;;auto-package-update
 	  org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile
 	  nyan-mode yasnippet monokai-theme zoom-frm eno vlf markdown-mode evil git-timemachine haskell-mode evil-magit
-          suggest helm-spotify evil-surround
+      suggest helm-spotify evil-surround dockerfile-mode
 ))
 
 (load-theme 'monokai t)
@@ -258,3 +258,5 @@
 (defun my-haskell-mode-hook ()
   (local-set-key (kbd "C-c C-r") 'inferior-haskell-load-and-run))
 (add-hook 'haskell-mode-hook 'my-haskell-mode-hook)
+
+(provide 'emacs)
