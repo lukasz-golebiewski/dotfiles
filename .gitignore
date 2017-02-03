@@ -8,3 +8,6 @@ sbt/**/staging
 .emacs.desktop
 emacs.d
 
+# ensime
+.ensime
+.ensime_cache
