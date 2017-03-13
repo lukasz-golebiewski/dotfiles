@@ -49,7 +49,7 @@ ZSH_THEME="wedisagree"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, common-aliases)
+plugins=(git, common-aliases, z)
 
 # User configuration
 
@@ -112,4 +112,3 @@ fi
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
