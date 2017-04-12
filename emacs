@@ -59,7 +59,14 @@
 
 (require 'use-package)
 (use-package ensime
-	     :pin melpa-stable)
+  :ensure t
+  :pin melpa)
+
+(use-package sbt-mode
+  :pin melpa)
+
+(use-package scala-mode
+  :pin melpa)
 
 (packages-conditional-install
  '(use-package ensime magit git-gutter neotree ace-window avy csv-mode
@@ -75,9 +82,6 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; ensime hooked to scala-mode
-(require 'ensime)
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
