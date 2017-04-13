@@ -9,6 +9,8 @@
  use-package-always-ensure t
  sentence-end-double-space nil
  x-select-enable-clipboard t
+ ensime-startup-notification nil
+ ensime-startup-snapshot-notification nil
 )
 
 ;; buffer local variables
