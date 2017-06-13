@@ -1,5 +1,5 @@
-libraryDependencies += "com.lihaoyi" % "ammonite" % "0.8.3" % "test" cross CrossVersion.full
-initialCommands in (Test, console) := """ammonite.Main().run()"""
+//libraryDependencies += "com.lihaoyi" % "ammonite" % "0.9.3" % "test" cross CrossVersion.full
+//initialCommands in (Test, console) := """ammonite.Main().run()"""
 
 resolvers += "Artima Maven Repository" at "http://repo.artima.com/releases"
 //libraryDependencies += "org.scala-debugger" %% "scala-debugger-api" % "1.0.0"
