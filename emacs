@@ -59,6 +59,10 @@
     (package-conditional-install (car packages))
     (packages-conditional-install (cdr packages))))
 
+(packages-conditional-install
+ '(use-package)
+)
+
 (require 'use-package)
 (use-package ensime
   :ensure t
@@ -71,7 +75,7 @@
   :pin melpa)
 
 (packages-conditional-install
- '(use-package ensime magit git-gutter neotree ace-window avy csv-mode
+ '(ensime magit git-gutter neotree ace-window avy csv-mode
 	  elmacro key-chord multiple-cursors annoying-arrows-mode smartparens
 	  ;;auto-package-update
 	  org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile
