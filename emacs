@@ -72,6 +72,8 @@
   :pin melpa)
 
 (use-package scala-mode
+  :interpreter
+  ("scala" . scala-mode)
   :pin melpa)
 
 (packages-conditional-install
