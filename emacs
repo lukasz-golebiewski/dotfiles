@@ -273,5 +273,5 @@
 (defun my-haskell-mode-hook ()
   (local-set-key (kbd "C-c C-r") 'inferior-haskell-load-and-run))
 (add-hook 'haskell-mode-hook 'my-haskell-mode-hook)
-
+(require 'imenu)
 (provide 'emacs)
