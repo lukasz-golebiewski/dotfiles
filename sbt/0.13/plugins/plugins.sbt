@@ -9,4 +9,4 @@ addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.2")
 //resolvers += Resolver.bintrayIvyRepo("scalacenter", "sbt-releases")
 //addSbtPlugin("org.scala-sbt" % "sbt-zinc-plugin" % "1.0.0-X10")
 
-addSbtPlugin("org.duhemm" % "sbt-errors-summary" % "0.4.0")
+addSbtPlugin("org.duhemm" % "sbt-errors-summary" % "0.4.1")
