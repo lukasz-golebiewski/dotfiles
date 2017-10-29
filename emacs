@@ -66,15 +66,16 @@
 (require 'use-package)
 (use-package ensime
   :ensure t
-  :pin melpa)
+  :pin melpa-stable)
 
-(use-package sbt-mode
-  :pin melpa)
+;; For ensime development
+;; (use-package sbt-mode
+;;   :pin melpa)
 
-(use-package scala-mode
-  :interpreter
-  ("scala" . scala-mode)
-  :pin melpa)
+;; (use-package scala-mode
+;;   :interpreter
+;;   ("scala" . scala-mode)
+;;   :pin melpa)
 
 (packages-conditional-install
  '(ensime magit git-gutter neotree ace-window avy csv-mode
