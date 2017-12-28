@@ -3,6 +3,7 @@ sbt/boot
 sbt/launchers
 sbt/**/target
 sbt/**/staging
+sbt/**/zinc
 
 # emacs
 .emacs.desktop
