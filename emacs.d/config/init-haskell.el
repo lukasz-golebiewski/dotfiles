@@ -1,4 +1,14 @@
 ;; haskell
+
+(packages-conditional-install
+ '(ensime magit git-gutter neotree ace-window avy csv-mode
+	  haskell-mode
+))
+
+(require 'haskell-mode)
+
+(setq haskell-mode-hook (quote (turn-on-haskell-indentation)))
+
 (eval-after-load "haskell-mode"
     '(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile))
 (eval-after-load "haskell-cabal"
