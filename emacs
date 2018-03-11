@@ -92,7 +92,7 @@
     ("~/.dotfiles/zprezto/modules/completion/external/zsh-completions-howto.org")))
  '(package-selected-packages
    (quote
-    (helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode neotree multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit ensime eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update annoying-arrows-mode ag ace-window)))
+    (haskell-mode haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode neotree multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit ensime eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update annoying-arrows-mode ag ace-window)))
  '(safe-local-variable-values (quote ((python-shell-interpreter . "python3")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -183,14 +183,9 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
-;; python
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:setup-keys t)                      ; optional
-(setq jedi:complete-on-dot t)                 ; optional
-(setq python-shell-interpreter "python3")
-
 (load "~/.emacs.d/config/init-evil.el")
 (load "~/.emacs.d/config/init-haskell.el")
+;;(load "~/.emacs.d/config/init-python.el")
 
 (require 'imenu)
 
