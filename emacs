@@ -103,6 +103,7 @@
 
 ;; remember all opened files
 (desktop-save-mode 1)
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; enable mandatory modes
 (global-git-gutter-mode +1)
