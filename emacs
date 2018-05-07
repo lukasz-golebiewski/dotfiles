@@ -68,8 +68,8 @@
 	  elmacro key-chord multiple-cursors annoying-arrows-mode smartparens
 	  ;;auto-package-update
 	  org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile helm-etags-plus
-	  nyan-mode yasnippet monokai-theme zoom-frm eno vlf markdown-mode evil git-timemachine evil-magit
-      suggest evil-surround dockerfile-mode imenu+
+	  nyan-mode yasnippet monokai-theme eno vlf markdown-mode evil git-timemachine evil-magit
+      suggest evil-surround dockerfile-mode
 ))
 
 (load-theme 'monokai t)
