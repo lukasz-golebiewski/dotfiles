@@ -56,19 +56,15 @@
 
 (setq debug-on-error t)
 
-(require 'use-package)
 (use-package ensime
   :ensure t
-  :pin melpa-stable)
+  :pin melpa)
 
-;; For ensime development
-;; (use-package sbt-mode
-;;   :pin melpa)
+(use-package sbt-mode
+  :pin melpa)
 
-;; (use-package scala-mode
-;;   :interpreter
-;;   ("scala" . scala-mode)
-;;   :pin melpa)
+(use-package scala-mode
+  :pin melpa)
 
 (load "~/.emacs.d/config/init-utils.el")
 
@@ -102,7 +98,8 @@
  '(package-selected-packages
    (quote
     (haskell-mode haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode neotree multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit ensime eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update annoying-arrows-mode ag ace-window)))
- '(safe-local-variable-values (quote ((python-shell-interpreter . "python3")))))
+ '(safe-local-variable-values (quote ((python-shell-interpreter . "python3"))))
+ '(zoom-window-mode-line-color "DarkGreen"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -204,7 +201,6 @@
 
 (require 'zoom-window)
 (global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
-(custom-set-variables
- '(zoom-window-mode-line-color "DarkGreen"))
+
 
 (provide 'emacs)
