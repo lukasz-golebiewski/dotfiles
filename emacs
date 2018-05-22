@@ -69,7 +69,7 @@
 	  ;;auto-package-update
 	  org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile helm-etags-plus
 	  nyan-mode yasnippet monokai-theme eno vlf markdown-mode evil git-timemachine evil-magit
-      suggest evil-surround dockerfile-mode
+      suggest evil-surround dockerfile-mode zoom-window
 ))
 
 (load-theme 'monokai t)
@@ -192,5 +192,10 @@
 
 (require 'helm-etags-plus)
 (global-set-key (kbd "C-c .") 'helm-etags-plus-select)
+
+(require 'zoom-window)
+(global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
+(custom-set-variables
+ '(zoom-window-mode-line-color "DarkGreen"))
 
 (provide 'emacs)
