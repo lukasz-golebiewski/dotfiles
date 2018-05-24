@@ -75,7 +75,7 @@
 
 (packages-conditional-install
  '(ensime magit git-gutter neotree ace-window avy csv-mode
-	  elmacro key-chord multiple-cursors annoying-arrows-mode smartparens
+	  elmacro key-chord multiple-cursors smartparens
 	  ;;auto-package-update
 	  org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile helm-etags-plus
 	  nyan-mode yasnippet monokai-theme eno vlf markdown-mode evil git-timemachine evil-magit
@@ -102,7 +102,7 @@
     ("~/.dotfiles/zprezto/modules/completion/external/zsh-completions-howto.org")))
  '(package-selected-packages
    (quote
-    (haskell-mode haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode neotree multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit ensime eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update annoying-arrows-mode ag ace-window)))
+    (haskell-mode haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode neotree multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit ensime eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
  '(safe-local-variable-values (quote ((python-shell-interpreter . "python3"))))
  '(zoom-window-mode-line-color "DarkGreen"))
 (custom-set-faces
@@ -129,7 +129,6 @@
 ;; prompt only y or no
 (fset `yes-or-no-p `y-or-n-p)
 
-(annoying-arrows-mode 1)
 (elmacro-mode 1)
 
 ;; This is bound to f11 in Emacs 24.4
