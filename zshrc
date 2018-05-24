@@ -1,11 +1,20 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="wedisagree"
+# Path to your oh-my-zsh installation.
+export ZSH=/home/lukasz/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="agnoster"
+
+# Set list of themes to load
+# Setting this variable when ZSH_THEME=random
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,14 +58,17 @@ ZSH_THEME="wedisagree"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, common-aliases, z)
-
-# User configuration
-
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$HOME/.rbenv/shims:/usr/local/heroku/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-# export MANPATH="/usr/local/man:$MANPATH"
+plugins=(
+  git
+  emacs
+)
 
 source $ZSH/oh-my-zsh.sh
+
+# User configuration
+eval "$(fasd --init auto)"
+
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -72,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -82,29 +94,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-eval "$(fasd --init auto)"
 
-if [ -f ~/.bash_aliases ]; then
-    source ~/.bash_aliases
-else
-    print "404: ~/.bash_aliases not found."
+if [ -f ~/.commonrc ]; then
+    . ~/.commonrc
 fi
 
-alias fuck='TF_CMD=$(TF_ALIAS=fuck PYTHONIOENCODING=utf-8 TF_SHELL_ALIASES=$(alias) thefuck $(fc -ln -1 | tail -n 1)) && eval $TF_CMD && print -s $TF_CMD'
-
-export TERM=xterm-256color
-export JAVA_OPTS="-Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MetaspaceSize=512m"
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-
-if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
-
-# set PATH so it includes git bin if it exists
-if [ -d "~/git/my/utils/bin" ] ; then
-  PATH="~/git/my/utils/bin:$PATH"
-fi
-
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+## pyro
+export PATH=$PATH:/opt/cabal/2.2/bin/
+export PATH=$PATH:/home/lukasz/git/pyrofex/bnfc/source/.cabal-sandbox/bin
