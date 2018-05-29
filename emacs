@@ -97,9 +97,6 @@
    (quote
     ("6c62b1cd715d26eb5aa53843ed9a54fc2b0d7c5e0f5118d4efafa13d7715c56e" "38ba6a938d67a452aeb1dada9d7cdeca4d9f18114e9fc8ed2b972573138d4664" "0fb6369323495c40b31820ec59167ac4c40773c3b952c264dd8651a3b704f6b5" "196cc00960232cfc7e74f4e95a94a5977cb16fd28ba7282195338f68c84058ec" "51e228ffd6c4fff9b5168b31d5927c27734e82ec61f414970fc6bcce23bc140d" "c9e123d4ecd9ceb056806c6297336763e9e96eed6962bfc1d5252afcc2761610" default)))
  '(git-gutter:update-interval 2)
- '(org-agenda-files
-   (quote
-    ("~/.dotfiles/zprezto/modules/completion/external/zsh-completions-howto.org")))
  '(package-selected-packages
    (quote
     (haskell-mode haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode neotree multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit ensime eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
@@ -205,6 +202,29 @@
 
 (require 'zoom-window)
 (global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
+
+(require 'org)
+(global-set-key "\C-cs" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(define-key global-map "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-iswitchb)
+(setq org-default-notes-file (concat org-directory "/captured.org"))
+
+(setq org-refile-targets '(
+   (nil :maxlevel . 2)             ; refile to headings in the current buffer
+   (org-agenda-files :maxlevel . 2) ; refile to any of these files
+   ))
+
+(setq org-agenda-files '("~/ork"))
+
+;;(setq org-capture-templates
+;; '(("t" "Todo" entry (file+headline "~/org/capture.org" "Tasks")
+;;    "* TODO %?\n  %i\n  %a")
+;;   ("j" "Pyrofex JIRA issues wannabes" entry (file+headline "~/org/pyrofex-jira.org" "JIRA issues")
+;;        "* TODO %?\n  %i\n  %a")
+;;   ("p" "Pyrofex work" entry (file+datetree "~/org/pyrofex-log.org")
+;;        "* %? %U")))
+
 
 
 (provide 'emacs)
