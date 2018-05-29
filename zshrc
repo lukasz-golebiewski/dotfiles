@@ -102,3 +102,8 @@ fi
 ## pyro
 export PATH=$PATH:/opt/cabal/2.2/bin/
 export PATH=$PATH:/home/lukasz/git/pyrofex/bnfc/source/.cabal-sandbox/bin
+
+## ctags
+sctags() {
+   ctags -e -R --languages=scala --exclude=target -f TAGS
+}
