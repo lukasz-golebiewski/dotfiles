@@ -175,7 +175,6 @@
 (key-chord-mode 1)
 (key-chord-define-global "sw" 'ace-swap-window)
 (key-chord-define-global "df" 'helm-do-ag-project-root)
-(key-chord-define-global "cd" 'double-line)
 (key-chord-define-global "r[" 'replace-regexp)
 (key-chord-define-global "r]" 'projectile-replace-regexp)
 
