@@ -61,16 +61,6 @@
 
 (setq debug-on-error t)
 
-(use-package ensime
-  :ensure t
-  :pin melpa)
-
-(use-package sbt-mode
-  :pin melpa)
-
-(use-package scala-mode
-  :pin melpa)
-
 (load "~/.emacs.d/config/init-utils.el")
 
 (packages-conditional-install
@@ -192,6 +182,7 @@
 
 (load "~/.emacs.d/config/init-evil.el")
 (load "~/.emacs.d/config/init-haskell.el")
+(load "~/.emacs.d/config/init-scala.el")
 ;;(load "~/.emacs.d/config/init-python.el")
 
 (require 'imenu)
@@ -223,8 +214,5 @@
 ;;        "* TODO %?\n  %i\n  %a")
 ;;   ("p" "Pyrofex work" entry (file+datetree "~/org/pyrofex-log.org")
 ;;        "* %? %U")))
-
-(require 'hydra)
-(global-set-key (kbd "C-c s") 'sbt-hydra)
 
 (provide 'emacs)
