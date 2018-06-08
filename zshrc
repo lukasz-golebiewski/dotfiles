@@ -107,3 +107,7 @@ export PATH=$PATH:/home/lukasz/git/pyrofex/bnfc/source/.cabal-sandbox/bin
 sctags() {
    ctags -e -R --languages=scala --exclude=target -f TAGS
 }
+
+rainbow() {
+  yes "$(seq 231 -1 16)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .02; done
+}
