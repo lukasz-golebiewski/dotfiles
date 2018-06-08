@@ -180,11 +180,6 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
-(load "~/.emacs.d/config/init-evil.el")
-(load "~/.emacs.d/config/init-haskell.el")
-(load "~/.emacs.d/config/init-scala.el")
-;;(load "~/.emacs.d/config/init-python.el")
-
 (require 'imenu)
 
 (require 'helm-etags-plus)
@@ -214,5 +209,10 @@
 ;;        "* TODO %?\n  %i\n  %a")
 ;;   ("p" "Pyrofex work" entry (file+datetree "~/org/pyrofex-log.org")
 ;;        "* %? %U")))
+
+(load "~/.emacs.d/config/init-evil.el")
+(load "~/.emacs.d/config/init-haskell.el")
+(load "~/.emacs.d/config/init-scala.el")
+;;(load "~/.emacs.d/config/init-python.el")
 
 (provide 'emacs)
