@@ -158,7 +158,7 @@
 (global-set-key (kbd "S-C-h") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-j") 'shrink-window)
 (global-set-key (kbd "S-C-k") 'enlarge-window)
-(global-set-key (kbd "C-c u") 'undo-tree-visualize)
+(global-set-key (kbd "s-u") 'undo-tree-visualize)
 (global-set-key (kbd "C-c d") 'desktop-change-dir)
 
 (require 'key-chord)
