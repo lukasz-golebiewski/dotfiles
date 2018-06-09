@@ -7,7 +7,10 @@ sbt/**/zinc
 
 # emacs
 .emacs.desktop
-emacs.d
+!emacs.d
+emacs.d/*
+
+!emacs.d/config
 
 # ensime
 .ensime
