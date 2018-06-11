@@ -15,3 +15,5 @@ emacs.d/*
 # ensime
 .ensime
 .ensime_cache
+
+.sbt-hydra-history
