@@ -1,13 +1,18 @@
 set clipboard+=unnamed
-set ignorecase
+set ignorecase smartcase
 set incsearch
 set noerrorbells
 set showmode
 set smartcase
 set surround
 set visualbell
+set history=1000
 
 let mapleader = " "
+
+" reload
+nnoremap <leader>rl :source ~/.ideavimrc<CR>
+
 nnoremap <leader>b     :action GotoDeclaration<CR>
 nnoremap <leader><a-b> :action GotoImplementation<CR>
 nnoremap <leader>B     :action GotoTypeDeclaration<CR>
