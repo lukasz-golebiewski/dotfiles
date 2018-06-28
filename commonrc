@@ -1,0 +1,21 @@
+## pyro
+
+assembly_name=rnode-assembly-0.4.2.jar
+
+node_bootstrap() {
+    bname="bootstrap"
+    java -Djava.net.preferIPv4Stack=true -jar "$HOME/git/pyrofex/rchain/node/target/scala-2.12/$assembly_name" run -s -p 60000
+}
+
+node_connect() {
+    nname="node"$1
+    java -Djava.net.preferIPv4Stack=true -jar $HOME/git/pyrofex/rchain/node/target/scala-2.12/$assembly_name -b "rnode://bootstrap@192.168.1.123:60000" -p $1 --http-port $2 --grpc-port $3 --metrics-port $4 -n $nname
+}
+
+node_repl() {
+    java -jar $HOME/git/pyrofex/rchain/node/target/scala-2.12/$assembly_name --repl
+}
+
+node_diagnostics() {
+    java -jar $HOME/git/pyrofex/rchain/node/target/scala-2.12/$assembly_name diagnostics
+}
