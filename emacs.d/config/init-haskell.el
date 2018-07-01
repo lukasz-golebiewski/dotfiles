@@ -1,11 +1,5 @@
 ;; haskell
-
-(packages-conditional-install
- '(ensime magit git-gutter neotree ace-window avy csv-mode
-	  haskell-mode
-))
-
-(require 'haskell-mode)
+(use-package haskell-mode)
 
 (setq haskell-mode-hook (quote (turn-on-haskell-indentation)))
 
