@@ -1,5 +1,13 @@
 ;; see no evil
 (use-package evil)
+(use-package evil-leader)
+(global-evil-leader-mode)
+
+(evil-leader/set-key
+  "e" 'find-file
+  "b" 'switch-to-buffer
+  "k" 'kill-buffer)
+
 (evil-mode 1)
 ;;(key-chord-define evil-insert-state-map  "ff" 'evil-normal-state)
 (global-set-key (kbd "C-c l") 'ensime-edit-definition)
