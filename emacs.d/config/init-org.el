@@ -1,17 +1,17 @@
 (use-package org)
 
-(global-set-key "\C-cs" 'org-store-link)
+(global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
-(define-key global-map "\C-cc" 'org-capture)
+(global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
-(setq org-default-notes-file (concat org-directory "/captured.org"))
 
+(setq org-directory "~/grive/org")
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(setq org-agenda-files '("~/grive/org/agenda"))
 (setq org-refile-targets '(
-   (nil :maxlevel . 2)             ; refile to headings in the current buffer
+   (nil :maxlevel . 2)              ; refile to headings in the current buffer
    (org-agenda-files :maxlevel . 2) ; refile to any of these files
    ))
-
-(setq org-agenda-files '("~/grive/org/agenda"))
 
 ;;(setq org-capture-templates
 ;; '(("t" "Todo" entry (file+headline "~/org/capture.org" "Tasks")
