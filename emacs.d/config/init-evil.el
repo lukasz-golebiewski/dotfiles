@@ -3,6 +3,7 @@
 (use-package evil-leader)
 (global-evil-leader-mode)
 
+(evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
   "e" 'find-file
   "b" 'switch-to-buffer
