@@ -1,5 +1,5 @@
 ;; see no evil
-(require 'evil)
+(use-package evil)
 (evil-mode 1)
 ;;(key-chord-define evil-insert-state-map  "ff" 'evil-normal-state)
 (global-set-key (kbd "C-c l") 'ensime-edit-definition)
@@ -17,6 +17,6 @@
 ;; (setq evil-magit-state 'normal)
 ;; optional: disable additional bindings for yanking text
 ;; (setq evil-magit-use-y-for-yank nil)
-(require 'evil-magit)
-(require 'evil-surround)
+(use-package evil-magit)
+(use-package evil-surround)
 (global-evil-surround-mode 1)

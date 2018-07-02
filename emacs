@@ -64,8 +64,8 @@
 	  elmacro key-chord multiple-cursors smartparens
 	  ;;auto-package-update
 	  org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile helm-etags-plus
-	  nyan-mode yasnippet monokai-theme eno vlf markdown-mode evil git-timemachine evil-magit
-      suggest evil-surround dockerfile-mode zoom-window hydra
+	  nyan-mode yasnippet monokai-theme eno vlf markdown-mode git-timemachine
+      suggest dockerfile-mode zoom-window hydra
 ))
 
 (load-theme 'monokai t)
@@ -85,7 +85,7 @@
  '(git-gutter:update-interval 2)
  '(package-selected-packages
    (quote
-    (haskell-mode hydra haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode neotree multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit ensime eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
+    (evil haskell-mode hydra haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode neotree multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit ensime eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
  '(safe-local-variable-values (quote ((python-shell-interpreter . "python3"))))
  '(zoom-window-mode-line-color "DarkGreen"))
 (custom-set-faces
