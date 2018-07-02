@@ -62,8 +62,7 @@
 (packages-conditional-install
  '(ensime magit git-gutter neotree ace-window avy csv-mode
 	  elmacro key-chord multiple-cursors smartparens
-	  ;;auto-package-update
-	  org which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile helm-etags-plus
+	  which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile helm-etags-plus
 	  nyan-mode yasnippet monokai-theme eno vlf markdown-mode git-timemachine
       suggest dockerfile-mode zoom-window hydra
 ))

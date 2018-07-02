@@ -1,4 +1,5 @@
-(require 'org)
+(use-package org)
+
 (global-set-key "\C-cs" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (define-key global-map "\C-cc" 'org-capture)
