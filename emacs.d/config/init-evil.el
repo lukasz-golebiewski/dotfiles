@@ -7,6 +7,8 @@
 (evil-leader/set-key
   "e" 'find-file
   "b" 'switch-to-buffer
+  "l" 'ensime-edit-definition
+  "h" 'ensime-pop-find-definition-stack
   "k" 'kill-buffer)
 
 (evil-mode 1)
