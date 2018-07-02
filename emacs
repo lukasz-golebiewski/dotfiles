@@ -46,16 +46,14 @@
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 (el-get 'sync)
 
-;; Locally defined recipes
-(el-get-bundle zoom-frm
-  :url "https://github.com/emacsmirror/emacswiki.org.git"
-  :features zoom-frm)
-
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents)
   (package-install 'use-package))
 (require 'use-package)
+
+(el-get-bundle frame-fns)
+(el-get-bundle zoom-frm)
 
 (setq debug-on-error t)
 
