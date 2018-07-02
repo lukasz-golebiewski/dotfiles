@@ -59,6 +59,7 @@
 
 (load "~/.emacs.d/config/init-utils.el")
 
+;; TODO: replace with use-package
 (packages-conditional-install
  '(ensime magit git-gutter neotree ace-window avy csv-mode
 	  elmacro key-chord multiple-cursors smartparens
