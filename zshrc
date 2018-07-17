@@ -61,6 +61,7 @@ ZSH_THEME="agnoster"
 plugins=(
   git
   emacs
+  history-search-multi-word
 )
 
 source $ZSH/oh-my-zsh.sh
