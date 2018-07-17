@@ -1,6 +1,6 @@
 ## pyro
 
-assembly_name=rnode-assembly-0.4.2.jar
+assembly_name=rnode-assembly-0.5.1.jar
 
 rnode() {
     java -jar $HOME/git/pyrofex/rchain/node/target/scala-2.12/$assembly_name ${@:1:99}
