@@ -1,9 +1,10 @@
 ## pyro
 
-assembly_name=rnode-assembly-0.5.1.jar
+assembly_name=rnode-assembly-0.5.3.jar
+rchain_repo=$HOME/git/pyrofex/rchain
 
 rnode() {
-    java -jar $HOME/git/pyrofex/rchain/node/target/scala-2.12/$assembly_name ${@:1:99}
+    java -jar $rchain_repo/node/target/scala-2.12/$assembly_name ${@:1:99}
 }
 
 rnode_bootstrap() {
@@ -13,10 +14,10 @@ rnode_bootstrap() {
 
 rnode_connect() {
     nname="node"$1
-    java -Djava.net.preferIPv4Stack=true -jar $HOME/git/pyrofex/rchain/node/target/scala-2.12/$assembly_name -b "rnode://bootstrap@192.168.1.123:60000" -p $1 --http-port $2 --grpc-port $3 --metrics-port $4 -n $nname
+    java -Djava.net.preferIPv4Stack=true -jar $rchain_repo/node/target/scala-2.12/$assembly_name -b "rnode://bootstrap@192.168.1.123:60000" -p $1 --http-port $2 --grpc-port $3 --metrics-port $4 -n $nname
 }
 
 rchain_it_test() {
-  pushd $HOME/git/pyrofex/rchain/
+  pushd $rchain_repo
   ./scripts/p2p-test-tool.py  -b -t -T propose
 }
