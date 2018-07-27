@@ -19,5 +19,6 @@ rnode_connect() {
 
 rchain_it_test() {
   pushd $rchain_repo
+  sbt ";project node ;docker:publishLocal"
   ./scripts/p2p-test-tool.py  -b -t -T propose
 }
