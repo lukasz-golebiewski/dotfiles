@@ -13,6 +13,10 @@ rnode_bootstrap() {
     rnode run -s -p 60000 --validator-private-key e8560a73b17665aef70cdca544c5f43ac8a5017ad299de734d6f0182f8852875
 }
 
+rnode_validator() {
+    rnode --grpc-port 30015 run --http-port 30011 --metrics-port 30013 --validator-private-key e8560a73b17665aef70cdca544c5f43ac8a5017ad299de734d6f0182f8852875 -b rnode://7222ec526dd097ba244d1db713687c70968abc15@178.43.243.148:60000
+}
+
 rnode_connect() {
     nname="node"$1
     java -Djava.net.preferIPv4Stack=true -jar $rchain_jar -b "rnode://bootstrap@192.168.1.123:60000" -p $1 --http-port $2 --grpc-port $3 --metrics-port $4 -n $nname
