@@ -1,20 +1,21 @@
 ## pyro
 
-assembly_name=rnode-assembly-0.5.3.jar
+rchain_assembly_name=rnode-assembly-0.5.3.jar
 rchain_repo=$HOME/git/pyrofex/rchain
+rchain_jar=$rchain_repo/node/target/scala-2.12/$rchain_assembly_name
 
 rnode() {
-    java -jar $rchain_repo/node/target/scala-2.12/$assembly_name ${@:1:99}
+    java -jar $rchain_jar ${@:1:99}
 }
 
 rnode_bootstrap() {
     bname="bootstrap"
-    rnode run -s -p 60000
+    rnode run -s -p 60000 --validator-private-key e8560a73b17665aef70cdca544c5f43ac8a5017ad299de734d6f0182f8852875
 }
 
 rnode_connect() {
     nname="node"$1
-    java -Djava.net.preferIPv4Stack=true -jar $rchain_repo/node/target/scala-2.12/$assembly_name -b "rnode://bootstrap@192.168.1.123:60000" -p $1 --http-port $2 --grpc-port $3 --metrics-port $4 -n $nname
+    java -Djava.net.preferIPv4Stack=true -jar $rchain_jar -b "rnode://bootstrap@192.168.1.123:60000" -p $1 --http-port $2 --grpc-port $3 --metrics-port $4 -n $nname
 }
 
 rchain_it_test() {
