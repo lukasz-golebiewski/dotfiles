@@ -12,6 +12,7 @@
  ensime-startup-notification nil
  ensime-startup-snapshot-notification nil
 )
+(ido-mode 1)
 
 ;; buffer local variables
 (setq-default
