@@ -103,6 +103,9 @@ fi
 if [ -f ~/git/my/utils/env.sh ]; then
     source ~/git/my/utils/env.sh
 fi
+if [ -f ~/git/my/utils/rchain.sh ]; then
+    source ~/git/my/utils/rchain.sh
+fi
 
 ## pyro
 export PATH=$PATH:/opt/cabal/2.2/bin/
