@@ -96,8 +96,12 @@ eval "$(fasd --init auto)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
 if [ -f ~/.commonrc ]; then
-    . ~/.commonrc
+    source ~/.commonrc
+fi
+if [ -f ~/git/my/utils/env.sh ]; then
+    source ~/git/my/utils/env.sh
 fi
 
 ## pyro
