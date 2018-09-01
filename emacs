@@ -53,6 +53,8 @@
   (package-install 'use-package))
 (require 'use-package)
 
+(use-package smex)
+
 (el-get-bundle frame-fns)
 (el-get-bundle zoom-frm)
 
@@ -89,7 +91,7 @@
     ("/home/lukasz/grive/org/agenda/general.org" "~/grive/org/notes.org" "/home/lukasz/grive/org/agenda/pyrofex.org")))
  '(package-selected-packages
    (quote
-    (evil-leader evil haskell-mode hydra haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode neotree multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit ensime eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
+    (smex evil-leader evil haskell-mode hydra haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode neotree multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit ensime eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
  '(safe-local-variable-values (quote ((python-shell-interpreter . "python3"))))
  '(zoom-window-mode-line-color "DarkGreen"))
 (custom-set-faces
