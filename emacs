@@ -11,6 +11,7 @@
  x-select-enable-clipboard t
  ensime-startup-notification nil
  ensime-startup-snapshot-notification nil
+ desktop-restore-eager 5
 )
 (ido-mode 1)
 
