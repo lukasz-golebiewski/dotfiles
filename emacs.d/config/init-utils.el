@@ -1,19 +1,3 @@
-;; mandatory modules installation
-(defun package-conditional-install (package-name)
-  "Installs a package if it is not present"
-  (unless (package-installed-p package-name)
-  (package-refresh-contents) (package-install package-name)))
-
-(defun packages-conditional-install (packages)
-  ""
-  (when packages
-    (package-conditional-install (car packages))
-    (packages-conditional-install (cdr packages))))
-
-(packages-conditional-install
- '(use-package)
-)
-
 ;; missing tools
 (defun toggle-comment-on-line ()
   "comment or uncomment current line"

@@ -54,8 +54,6 @@
   (package-install 'use-package))
 (require 'use-package)
 
-(use-package smex)
-
 (el-get-bundle frame-fns)
 (el-get-bundle zoom-frm)
 
@@ -63,14 +61,38 @@
 
 (load "~/.emacs.d/config/init-utils.el")
 
-;; TODO: replace with use-package
-(packages-conditional-install
- '(ensime magit git-gutter neotree ace-window avy csv-mode
-	  elmacro key-chord multiple-cursors smartparens
-	  which-key undo-tree bind-key projectile ag helm helm-ag helm-projectile helm-etags-plus
-	  nyan-mode yasnippet monokai-theme eno vlf markdown-mode git-timemachine
-      suggest dockerfile-mode zoom-window hydra
-))
+(use-package smex)
+(use-package ensime)
+(use-package magit)
+(use-package git-gutter)
+(use-package neotree)
+(use-package ace-window)
+(use-package avy)
+(use-package csv-mode)
+(use-package elmacro)
+(use-package key-chord)
+(use-package multiple-cursors)
+(use-package smartparens)
+(use-package which-key)
+(use-package undo-tree)
+(use-package bind-key)
+(use-package projectile)
+(use-package ag)
+(use-package helm)
+(use-package helm-ag)
+(use-package helm-projectile)
+(use-package helm-etags-plus)
+(use-package nyan-mode)
+(use-package yasnippet)
+(use-package monokai-theme)
+(use-package eno)
+(use-package vlf)
+(use-package markdown-mode)
+(use-package git-timemachine)
+(use-package suggest)
+(use-package dockerfile-mode)
+(use-package zoom-window)
+(use-package hydra)
 
 (load-theme 'monokai t)
 
