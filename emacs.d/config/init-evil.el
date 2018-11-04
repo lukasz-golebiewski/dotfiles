@@ -6,6 +6,7 @@
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
   "e" 'find-file
+  "y" 'helm-show-kill-ring
   "b" 'switch-to-buffer
   "l" 'ensime-edit-definition
   "h" 'ensime-pop-find-definition-stack
