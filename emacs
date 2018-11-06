@@ -15,6 +15,9 @@
 )
 (ido-mode 1)
 
+;; character level diffs
+(setq-default ediff-forward-word-function 'forward-char)
+
 ;; buffer local variables
 (setq-default
  indent-tabs-mode nil
