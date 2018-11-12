@@ -115,7 +115,7 @@
  '(git-gutter:update-interval 2)
  '(org-agenda-files
    (quote
-    ("/home/lukasz/grive/org/agenda/general.org" "~/grive/org/notes.org" "/home/lukasz/grive/org/agenda/pyrofex.org")))
+    ("~/grive/org/notes.org" "/home/lukasz/grive/org/agenda/general.org" "/home/lukasz/grive/org/agenda/pyrofex.org")))
  '(package-selected-packages
    (quote
     (yaml-mode smex evil-leader evil haskell-mode hydra haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode neotree multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit ensime eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
