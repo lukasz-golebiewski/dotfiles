@@ -108,9 +108,10 @@ if [ -f ~/git/my/utils/rchain.sh ]; then
     source ~/git/my/utils/rchain.sh
 fi
 
-## pyro
+## cabal
 export PATH=$PATH:/opt/cabal/2.2/bin/
-export PATH=$PATH:/home/lukasz/git/pyrofex/bnfc/source/.cabal-sandbox/bin
+export PATH=$PATH:~/.cabal/bin/
+export PATH=$PATH:~/git/pyrofex/bnfc/source/.cabal-sandbox/bin
 
 ## ctags
 sctags() {
