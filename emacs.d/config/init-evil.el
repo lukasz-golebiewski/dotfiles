@@ -7,6 +7,7 @@
 (evil-leader/set-key
   "e" 'find-file
   "y" 'helm-show-kill-ring
+  "u" 'undo-tree-visualize
   "b" 'switch-to-buffer
   "l" 'ensime-edit-definition
   "h" 'ensime-pop-find-definition-stack
