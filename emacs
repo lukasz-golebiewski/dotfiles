@@ -225,3 +225,4 @@
 ;;(load "~/.emacs.d/config/init-python.el")
 
 (provide 'emacs)
+(and window-system (server-start))
