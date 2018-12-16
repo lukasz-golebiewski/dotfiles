@@ -102,6 +102,9 @@
 (use-package hydra)
 (use-package yaml-mode)
 (use-package idris-mode)
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
 
 (load-theme 'monokai t)
 
