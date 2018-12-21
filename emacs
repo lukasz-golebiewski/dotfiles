@@ -8,7 +8,7 @@
  show-paren-delay 0.5
  use-package-always-ensure t
  sentence-end-double-space nil
- x-select-enable-clipboard t
+ select-enable-clipboard t
  ensime-startup-notification nil
  ensime-startup-snapshot-notification nil
  desktop-restore-eager 5
