@@ -126,3 +126,4 @@ rainbow() {
 }
 
 alias delete-targets="find . -name target -exec rm -rf {} \;"
+alias clear-targets=delete-targets
