@@ -127,3 +127,4 @@ rainbow() {
 
 alias delete-targets="find . -name target -exec rm -rf {} \;"
 alias clear-targets=delete-targets
+alias move-up="find . -maxdepth 1 -exec mv {} .. \;"
