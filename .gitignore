@@ -17,3 +17,7 @@ emacs.d/*
 .ensime_cache
 
 .sbt-hydra-history
+
+# metals
+.bloop
+.metals
