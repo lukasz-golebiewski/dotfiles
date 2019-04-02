@@ -9,8 +9,6 @@
  use-package-always-ensure t
  sentence-end-double-space nil
  select-enable-clipboard t
- ensime-startup-notification nil
- ensime-startup-snapshot-notification nil
  desktop-restore-eager 5
 )
 (ido-mode 1)
@@ -69,7 +67,6 @@
 (load "~/.emacs.d/config/init-utils.el")
 
 (use-package smex)
-(use-package ensime)
 (use-package magit)
 (use-package git-gutter)
 (use-package ace-window)
@@ -123,7 +120,7 @@
  '(org-agenda-files (quote ("/home/lukasz/grive/org/agenda/general.org")))
  '(package-selected-packages
    (quote
-    (intero idris-mode yaml-mode smex evil-leader evil haskell-mode hydra haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit ensime eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
+    (lsp-ui lsp-mode company-lsp intero idris-mode yaml-mode smex evil-leader evil haskell-mode hydra haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
  '(safe-local-variable-values (quote ((python-shell-interpreter . "python3"))))
  '(zoom-window-mode-line-color "DarkGreen"))
 (custom-set-faces
