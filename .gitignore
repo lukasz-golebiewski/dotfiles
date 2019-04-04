@@ -4,6 +4,7 @@ sbt/launchers
 sbt/**/target
 sbt/**/staging
 sbt/**/zinc
+sbt/**/metals.sbt
 
 # emacs
 .emacs.desktop
