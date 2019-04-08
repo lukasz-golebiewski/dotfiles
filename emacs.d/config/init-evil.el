@@ -9,14 +9,14 @@
   "y" 'helm-show-kill-ring
   "u" 'undo-tree-visualize
   "b" 'switch-to-buffer
-  "l" 'ensime-edit-definition
-  "h" 'ensime-pop-find-definition-stack
+  "r" 'lsp-find-references
+  "d" 'lsp-find-definition
   "k" 'kill-buffer)
 
 (evil-mode 1)
 ;;(key-chord-define evil-insert-state-map  "ff" 'evil-normal-state)
-(global-set-key (kbd "C-c l") 'ensime-edit-definition)
-(global-set-key (kbd "C-c h") 'ensime-pop-find-definition-stack)
+;;(global-set-key (kbd "C-c l") 'lsp-ui-peek-find-definitions)
+;;(global-set-key (kbd "C-c h") 'lsp-ui-peek-jump-backward)
 
 (add-hook 'neotree-mode-hook
   (lambda ()
