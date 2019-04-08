@@ -1,6 +1,16 @@
+;;; init-evil.el --- Evil mode bindings
+
+;;; Commentary:
+
 ;; see no evil
+
+;;; Code:
 (use-package evil)
 (use-package evil-leader)
+
+(require 'evil)
+(require 'evil-leader)
+
 (global-evil-leader-mode)
 
 (evil-leader/set-leader "<SPC>")
@@ -25,3 +35,6 @@
 (use-package evil-magit)
 (use-package evil-surround)
 (global-evil-surround-mode 1)
+
+(provide 'init-evil)
+;;; init-evil.el ends here
