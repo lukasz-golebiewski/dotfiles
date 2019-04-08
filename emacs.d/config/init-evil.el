@@ -18,14 +18,6 @@
 ;;(global-set-key (kbd "C-c l") 'lsp-ui-peek-find-definitions)
 ;;(global-set-key (kbd "C-c h") 'lsp-ui-peek-jump-backward)
 
-(add-hook 'neotree-mode-hook
-  (lambda ()
-    (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
-    (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
-    (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
-    (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
-  )
-)
 ;; optional: this is the evil state that evil-magit will use
 ;; (setq evil-magit-state 'normal)
 ;; optional: disable additional bindings for yanking text
