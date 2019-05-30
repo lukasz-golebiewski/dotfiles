@@ -1,4 +1,8 @@
-;; Enable scala-mode and sbt-mode
+;;; init-scala.el --- Scala development configuration
+
+;;; Commentary:
+
+;;; Code:
 (use-package scala-mode
   :mode "\\.s\\(cala\\|bt\\)$")
 
@@ -15,11 +19,15 @@
 (use-package lsp-mode
  :init (setq lsp-prefer-flymake nil))
 
-(use-package lsp-ui
-  :hook (lsp-mode . lsp-ui-mode))
+(use-package lsp-ui)
+
+(use-package company-lsp)
 
 (use-package lsp-scala
   :after scala-mode
   :demand t
   ;; Optional - enable lsp-scala automatically in scala files
   :hook (scala-mode . lsp))
+
+(provide 'init-scala)
+;;; init-scala.el ends here
