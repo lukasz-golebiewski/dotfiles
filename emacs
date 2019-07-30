@@ -163,7 +163,7 @@
 (setq line-move-visual nil)
 
 ;; custom kbd mappings
-(global-set-key (kbd "C-s-c C-s-c") 'mc/edit-lines)
+(global-set-key (kbd "C-c m c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-m") 'mc/mark-all-like-this)
