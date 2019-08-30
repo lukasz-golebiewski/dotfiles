@@ -86,7 +86,9 @@
 (use-package helm-projectile)
 (use-package helm-etags-plus)
 (use-package nyan-mode)
-(use-package yasnippet)
+(use-package yasnippet
+  :pin melpa
+)
 (use-package monokai-theme)
 (use-package eno)
 (use-package vlf)

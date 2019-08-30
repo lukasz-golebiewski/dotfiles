@@ -1,6 +1,8 @@
 ;; haskell
 
-(use-package haskell-mode)
+(use-package haskell-mode
+  :pin melpa
+)
 (use-package intero
   :pin melpa
 )
