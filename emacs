@@ -122,8 +122,11 @@
  '(org-agenda-files (quote ("~/notes/DOING.org")))
  '(package-selected-packages
    (quote
-    (lsp-scala sbt-mode scala-mode lsp-ui lsp-mode company-lsp intero idris-mode yaml-mode smex evil-leader evil haskell-mode hydra haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf use-package suggest smartparens popup-imenu nyan-mode multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
- '(safe-local-variable-values (quote ((python-shell-interpreter . "python3"))))
+    (lsp-scala sbt-mode scala-mode company-lsp idris-mode yaml-mode smex evil-leader evil haskell-mode hydra haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf suggest popup-imenu nyan-mode multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
+ '(safe-local-variable-values
+   (quote
+    ((intero-targets "polysemy-playground:lib" "polysemy-playground:test:polysemy-playground-test")
+     (python-shell-interpreter . "python3"))))
  '(zoom-window-mode-line-color "DarkGreen"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
