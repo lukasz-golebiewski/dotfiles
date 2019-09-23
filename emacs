@@ -31,13 +31,13 @@
 ;; the package manager
 (require 'package)
 (setq
- package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+ package-archives '(;;("gnu" . "http://elpa.gnu.org/packages/")
                     ("org" . "http://orgmode.org/elpa/")
                     ("melpa" . "http://melpa.org/packages/")
                     ("melpa-stable" . "http://stable.melpa.org/packages/"))
  package-archive-priorities '(("melpa-stable" . 1)
                               ("melpa" . 2)
-                              ("gnu" . 3)
+                              ;;("gnu" . 3)
  )
 )
 
