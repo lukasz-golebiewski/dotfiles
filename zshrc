@@ -121,6 +121,11 @@ sctags() {
    ctags -e -R --languages=scala --exclude=target -f TAGS
 }
 
+## nix
+if [ -f ~/.nix-profile/etc/profile.d/nix.sh ]; then
+  source ~/.nix-profile/etc/profile.d/nix.sh
+fi
+
 rainbow() {
   yes "$(seq 231 -1 16)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .02; done
 }
