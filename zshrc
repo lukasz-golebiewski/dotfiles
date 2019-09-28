@@ -60,7 +60,7 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  emacs
+  #emacs
   you-should-use
   history-search-multi-word
 ) ## !!! ACHTUNG !!! history search should be always the last on the list above
@@ -133,3 +133,4 @@ rainbow() {
 alias delete-targets="find . -name target -exec rm -rf {} \;"
 alias clear-targets=delete-targets
 alias move-up="find . -maxdepth 1 -exec mv {} .. \;"
+
