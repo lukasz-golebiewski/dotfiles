@@ -13,6 +13,8 @@
 )
 (ido-mode 1)
 
+(global-display-line-numbers-mode)
+
 ;; character level diffs
 (setq-default ediff-forward-word-function 'forward-char)
 
