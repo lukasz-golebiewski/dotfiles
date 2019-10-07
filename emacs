@@ -200,8 +200,10 @@
 (key-chord-mode 1)
 (key-chord-define-global "sw" 'ace-swap-window)
 (key-chord-define-global "df" 'helm-do-ag-project-root)
-(key-chord-define-global "r[" 'replace-regexp)
-(key-chord-define-global "r]" 'projectile-replace-regexp)
+(key-chord-define-global "e[" 'replace-regexp)
+(key-chord-define-global "e]" 'projectile-replace-regexp)
+(key-chord-define-global "r[" 'replace)
+(key-chord-define-global "r]" 'projectile-replace)
 
 (require 'eno)
 (key-chord-define-global "jk" 'eno-word-goto)
