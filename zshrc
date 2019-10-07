@@ -134,3 +134,6 @@ alias delete-targets="find . -name target -exec rm -rf {} \;"
 alias clear-targets=delete-targets
 alias move-up="find . -maxdepth 1 -exec mv {} .. \;"
 
+alias run-emacs-daemon="emacs --daemon"
+alias run-emacs-client="emacsclient -c -a emacs"
+
