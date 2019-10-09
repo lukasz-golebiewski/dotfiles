@@ -221,6 +221,7 @@
 
 (require 'helm-etags-plus)
 (global-set-key (kbd "C-c l") 'helm-etags-plus-select)
+(global-set-key (kbd "C-c h") 'helm-etags-plus-history-go-back)
 
 (require 'zoom-window)
 (global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
