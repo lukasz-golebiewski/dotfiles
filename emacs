@@ -3,6 +3,9 @@
 ;;; Commentary:
 
 ;;; Code:
+(defvar show-paren-delay)
+(defvar use-package-always-ensure)
+(defvar desktop-restore-eager)
 (setq
  inhibit-startup-screen t
  create-lockfiles nil
@@ -237,7 +240,6 @@
 (load "~/.emacs.d/config/init-haskell.el")
 (load "~/.emacs.d/config/init-org.el")
 (load "~/.emacs.d/config/init-scala.el")
-;;(load "~/.emacs.d/config/init-python.el")
 
 (provide 'emacs)
 (and window-system (server-start))
