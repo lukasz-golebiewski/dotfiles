@@ -47,6 +47,9 @@
  )
 )
 
+(declare-function el-get "el-get")
+(declare-function el-get-bundle "el-get-bundle")
+
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (unless (require 'el-get nil 'noerror)
