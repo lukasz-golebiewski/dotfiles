@@ -71,8 +71,8 @@
   (package-install 'use-package))
 (require 'use-package)
 
-(el-get-bundle frame-fns)
-(el-get-bundle zoom-frm)
+(el-get-bundle 'frame-fns)
+(el-get-bundle 'zoom-frm)
 
 (setq debug-on-error t)
 
