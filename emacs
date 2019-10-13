@@ -1,4 +1,8 @@
-;; global variables
+;;; emacs --- Main emacs config
+
+;;; Commentary:
+
+;;; Code:
 (setq
  inhibit-startup-screen t
  create-lockfiles nil
@@ -42,6 +46,9 @@
                               ("gnu" . 3)
  )
 )
+
+(declare-function el-get "el-get")
+(declare-function el-get-bundle "el-get-bundle")
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (add-to-list 'load-path "~/.emacs.d/lisp")
@@ -234,3 +241,4 @@
 
 (provide 'emacs)
 (and window-system (server-start))
+;;; emacs ends here
