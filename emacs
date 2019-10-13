@@ -1,4 +1,8 @@
-;; global variables
+;;; emacs --- Main emacs config
+
+;;; Commentary:
+
+;;; Code:
 (setq
  inhibit-startup-screen t
  create-lockfiles nil
@@ -234,3 +238,4 @@
 
 (provide 'emacs)
 (and window-system (server-start))
+;;; emacs ends here
