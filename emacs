@@ -6,6 +6,7 @@
 (defvar show-paren-delay)
 (defvar use-package-always-ensure)
 (defvar desktop-restore-eager)
+(defvar tags-revert-without-query)
 (setq
  inhibit-startup-screen t
  create-lockfiles nil
@@ -17,6 +18,7 @@
  sentence-end-double-space nil
  select-enable-clipboard t
  desktop-restore-eager 5
+ tags-revert-without-query t
 )
 (ido-mode 1)
 
