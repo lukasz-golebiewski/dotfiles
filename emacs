@@ -22,8 +22,6 @@
 )
 (ido-mode 1)
 
-(global-display-line-numbers-mode)
-
 ;; character level diffs
 (setq-default ediff-forward-word-function 'forward-char)
 
@@ -214,6 +212,7 @@
 (key-chord-define-global "e]" 'projectile-replace-regexp)
 (key-chord-define-global "r[" 'replace)
 (key-chord-define-global "r]" 'projectile-replace)
+(key-chord-define-global "lm" 'linum-mode)
 
 (require 'eno)
 (key-chord-define-global "jk" 'eno-word-goto)
