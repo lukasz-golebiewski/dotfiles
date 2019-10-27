@@ -19,6 +19,7 @@
  select-enable-clipboard t
  desktop-restore-eager 5
  tags-revert-without-query t
+ desktop-load-locked-desktop t
 )
 (ido-mode 1)
 
