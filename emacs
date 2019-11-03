@@ -99,6 +99,7 @@
 (use-package helm-ag)
 (use-package helm-projectile)
 (use-package helm-etags-plus)
+(use-package helm-swoop)
 (use-package nyan-mode)
 (use-package yasnippet
   :pin melpa
@@ -136,7 +137,7 @@
  '(org-agenda-files (quote ("~/notes/DOING.org")))
  '(package-selected-packages
    (quote
-    (intero lsp-scala sbt-mode scala-mode company-lsp idris-mode yaml-mode smex evil-leader evil haskell-mode hydra haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf suggest popup-imenu nyan-mode multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
+    (helm-swoop lsp-scala sbt-mode scala-mode company-lsp idris-mode yaml-mode smex evil-leader evil haskell-mode hydra haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf suggest popup-imenu nyan-mode multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
  '(safe-local-variable-values (quote ((python-shell-interpreter . "python3"))))
  '(zoom-window-mode-line-color "DarkGreen"))
 (custom-set-faces
@@ -205,6 +206,10 @@
 (global-set-key (kbd "S-C-k") 'enlarge-window)
 (global-set-key (kbd "C-c u") 'undo-tree-visualize)
 (global-set-key (kbd "C-c d") 'desktop-change-dir)
+(global-set-key (kbd "M-i") 'helm-swoop)
+(global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
+(global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
+(global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
 
 (require 'key-chord)
 (key-chord-mode 1)
