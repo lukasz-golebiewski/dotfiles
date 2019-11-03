@@ -7,6 +7,7 @@
 (defvar use-package-always-ensure)
 (defvar desktop-restore-eager)
 (defvar tags-revert-without-query)
+(defvar desktop-load-locked-desktop)
 (setq
  inhibit-startup-screen t
  create-lockfiles nil
