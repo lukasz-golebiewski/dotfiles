@@ -88,7 +88,6 @@
 (use-package csv-mode)
 (use-package elmacro)
 (use-package key-chord)
-(use-package multiple-cursors)
 (use-package smartparens)
 (use-package which-key)
 (use-package undo-tree)
@@ -137,7 +136,7 @@
  '(org-agenda-files (quote ("~/notes/DOING.org")))
  '(package-selected-packages
    (quote
-    (helm-swoop lsp-scala sbt-mode scala-mode company-lsp idris-mode yaml-mode smex evil-leader evil haskell-mode hydra haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf suggest popup-imenu nyan-mode multiple-cursors monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
+    (evil-mc flycheck-haskell helm-swoop lsp-scala sbt-mode scala-mode company-lsp idris-mode yaml-mode smex evil-leader evil haskell-mode hydra haskell-emacs helm-etags-plus helm-tags helm-etags-select elm-mode zoom-frm which-key vlf suggest popup-imenu nyan-mode monokai-theme markdown-mode key-chord imenu+ helm-projectile helm-ag git-timemachine git-gutter flycheck evil-tutor evil-surround evil-magit eno elmacro dockerfile-mode dired-imenu csv-mode auto-package-update ag ace-window)))
  '(safe-local-variable-values (quote ((python-shell-interpreter . "python3"))))
  '(zoom-window-mode-line-color "DarkGreen"))
 (custom-set-faces
@@ -180,10 +179,6 @@
 (setq line-move-visual nil)
 
 ;; custom kbd mappings
-(global-set-key (kbd "C-c m c") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-m") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-x C-m") 'magit-status)
 (global-set-key (kbd "C-x R") 'magit-ediff-resolve)
 (global-set-key (kbd "C-c /") 'toggle-comment-on-line)
