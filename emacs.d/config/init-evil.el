@@ -28,7 +28,9 @@
   "b" 'switch-to-buffer
   "r" 'lsp-find-references
   "d" 'lsp-find-definition
-  "k" 'kill-buffer)
+  "k" 'kill-buffer
+  "mb" 'magit-blame
+)
 
 (evil-mode 1)
 ;;(key-chord-define evil-insert-state-map  "ff" 'evil-normal-state)
