@@ -29,7 +29,7 @@
   "r" 'lsp-find-references
   "d" 'lsp-find-definition
   "k" 'kill-buffer
-  "mb" 'magit-blame
+  "gb" 'magit-blame
 )
 
 (evil-mode 1)
