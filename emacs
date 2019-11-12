@@ -224,6 +224,9 @@
 (load "~/.emacs.d/config/init-org.el")
 (load "~/.emacs.d/config/init-scala.el")
 
+(use-package nix-mode
+  :mode "\\.nix\\'")
+
 (provide 'emacs)
 (and window-system (server-start))
 ;;; emacs ends here
