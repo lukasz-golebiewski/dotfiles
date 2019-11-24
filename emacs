@@ -106,6 +106,9 @@
   :mode "\\.nix\\'"
 )
 
+;;; global hooks:
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;;; global modes:
 (electric-indent-mode 0)
 (ido-mode 1)
@@ -140,11 +143,10 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;;(auto-package-update-maybe)
-
 (require 'vlf-setup)
 (setq line-move-visual nil)
 
-;; custom kbd mappings
+;;; custom key mappings:
 (global-set-key (kbd "C-x C-m") 'magit-status)
 (global-set-key (kbd "C-x R") 'magit-ediff-resolve)
 (global-set-key (kbd "C-c /") 'toggle-comment-on-line)
@@ -153,9 +155,6 @@
 (global-set-key (kbd "C-x o") 'ace-window)
 (global-set-key (kbd "C-c C-s m") 'ace-maximize-window)
 (global-set-key (kbd "C-c r") 'revert-buffer)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
-(global-set-key (kbd "C-c C-f") 'helm-projectile-find-file-dwim)
 (global-set-key (kbd "C-.") 'goto-last-change)
 (global-set-key (kbd "C-c [") 'previous-buffer)
 (global-set-key (kbd "C-c ]") 'next-buffer)
@@ -165,11 +164,19 @@
 (global-set-key (kbd "S-C-k") 'enlarge-window)
 (global-set-key (kbd "C-c u") 'undo-tree-visualize)
 (global-set-key (kbd "C-c d") 'desktop-change-dir)
+;; helm
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+(global-set-key (kbd "C-c l") 'helm-etags-plus-select)
+(global-set-key (kbd "C-c h") 'helm-etags-plus-history-go-back)
+(global-set-key (kbd "C-c C-f") 'helm-projectile-find-file-dwim)
 (global-set-key (kbd "M-i") 'helm-swoop)
 (global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
 (global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
 (global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
+(global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
 
+;;; key chords:
 (require 'key-chord)
 (key-chord-mode 1)
 (key-chord-define-global "sw" 'ace-swap-window)
@@ -184,16 +191,7 @@
 (key-chord-define-global "jk" 'eno-word-goto)
 (global-set-key (kbd "C-x SPC") 'toggle-window-split)
 
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
 (require 'imenu)
-
-(require 'helm-etags-plus)
-(global-set-key (kbd "C-c l") 'helm-etags-plus-select)
-(global-set-key (kbd "C-c h") 'helm-etags-plus-history-go-back)
-
-(require 'zoom-window)
-(global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
 
 (load "~/.emacs.d/config/init-evil.el")
 (load "~/.emacs.d/config/init-haskell.el")
