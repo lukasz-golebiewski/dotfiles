@@ -63,6 +63,7 @@
 
 (load "~/.emacs.d/config/init-utils.el")
 
+;;; used packages:
 (use-package smex)
 (use-package magit)
 (use-package git-gutter)
@@ -99,7 +100,11 @@
 (use-package idris-mode)
 (use-package flycheck
   :ensure t
-  :init (global-flycheck-mode))
+  :init (global-flycheck-mode)
+)
+(use-package nix-mode
+  :mode "\\.nix\\'"
+)
 
 ;;; global modes:
 (electric-indent-mode 0)
@@ -194,9 +199,6 @@
 (load "~/.emacs.d/config/init-haskell.el")
 (load "~/.emacs.d/config/init-org.el")
 (load "~/.emacs.d/config/init-scala.el")
-
-(use-package nix-mode
-  :mode "\\.nix\\'")
 
 (provide 'emacs)
 (and window-system (server-start))
