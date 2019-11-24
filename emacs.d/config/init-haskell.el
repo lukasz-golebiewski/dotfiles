@@ -1,5 +1,8 @@
-;; haskell
+;;; init-haskell.el -- Initialize packages used for Haskell development
 
+;;; Commentary:
+
+;;; Code:
 (use-package haskell-mode
   :pin melpa
 )
