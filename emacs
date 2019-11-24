@@ -46,13 +46,14 @@
 ;; the package manager
 (require 'package)
 (setq
- package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                    ("org" . "http://orgmode.org/elpa/")
-                    ("melpa" . "http://melpa.org/packages/")
+ package-archives '(("elpa"         . "http://elpa.gnu.org/packages/")
+                    ("org"          . "http://orgmode.org/elpa/")
+                    ("melpa"        . "http://melpa.org/packages/")
                     ("melpa-stable" . "http://stable.melpa.org/packages/"))
  package-archive-priorities '(("melpa-stable" . 1)
-                              ("melpa" . 2)
-                              ("gnu" . 3)
+                              ("melpa"        . 2)
+                              ("elpa"         . 3)
+                              ("org"          . 4)
  )
 )
 
