@@ -57,8 +57,6 @@
  )
 )
 
-(add-to-list 'load-path "~/.emacs.d/lisp")
-
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents)
