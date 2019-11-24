@@ -27,7 +27,6 @@
    (when (file-exists-p custom-file)
        (load custom-file))
 
-(ido-mode 1)
 ;; character level diffs
 (setq-default ediff-forward-word-function 'forward-char)
 
@@ -36,9 +35,6 @@
  indent-tabs-mode nil
  tab-width 4
  c-basic-offset 4)
-
-;; modes
-(electric-indent-mode 0)
 
 ;; global keybindings
 (global-unset-key (kbd "C-z"))
@@ -105,39 +101,40 @@
   :ensure t
   :init (global-flycheck-mode))
 
+;;; global modes:
+(electric-indent-mode 0)
+(ido-mode 1)
+(global-git-gutter-mode +1)
+;; remember all open files
+(desktop-save-mode 1)
+(show-paren-mode 1)
+(column-number-mode 1)
+(elmacro-mode 1)
+;; Who uses the bar to scroll?
+(scroll-bar-mode 0)
+;; disable gui
+(tool-bar-mode 0)
+(menu-bar-mode 0)
+(which-key-mode)
+(global-undo-tree-mode 1)
+(helm-mode 1)
+(nyan-mode 1)
+(yas-global-mode 1)
+
+;; This is bound to f11 in Emacs 24.4
+(toggle-frame-fullscreen)
+;; prompt only y or no
+(fset `yes-or-no-p `y-or-n-p)
+
+;;; theme:
 (load-theme 'monokai t)
 
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; remember all open files
-(desktop-save-mode 1)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-;; enable mandatory modes
-(global-git-gutter-mode +1)
-
-(show-paren-mode 1)
-(column-number-mode 1)
-
-;; disable gui-related nonsens
-(tool-bar-mode 0)
-(menu-bar-mode 0)
-
-;; prompt only y or no
-(fset `yes-or-no-p `y-or-n-p)
-
-(elmacro-mode 1)
-
-;; This is bound to f11 in Emacs 24.4
-(toggle-frame-fullscreen)
-;; Who uses the bar to scroll?
-(scroll-bar-mode 0)
-
 ;;(auto-package-update-maybe)
-
-(which-key-mode)
-(global-undo-tree-mode 1)
 
 (require 'vlf-setup)
 (setq line-move-visual nil)
@@ -183,12 +180,6 @@
 (global-set-key (kbd "C-x SPC") 'toggle-window-split)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-(require 'nyan-mode)
-(nyan-mode 1)
-
-(require 'yasnippet)
-(yas-global-mode 1)
 
 (require 'imenu)
 
