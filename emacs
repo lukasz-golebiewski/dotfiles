@@ -4,7 +4,6 @@
 
 ;;; Code:
 (defvar show-paren-delay)
-(defvar el-get-recipe-path)
 (defvar use-package-always-ensure)
 (defvar desktop-restore-eager)
 (defvar tags-revert-without-query)
@@ -57,29 +56,13 @@
  )
 )
 
-(declare-function el-get "el-get")
-(declare-function el-get-bundle "el-get-bundle")
-
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
-
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(el-get 'sync)
 
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents)
   (package-install 'use-package))
 (require 'use-package)
-
-(el-get-bundle 'frame-fns)
-(el-get-bundle 'zoom-frm)
 
 (setq debug-on-error t)
 
@@ -128,7 +111,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; remember all opened files
+;; remember all open files
 (desktop-save-mode 1)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -164,8 +147,6 @@
 (global-set-key (kbd "C-x C-m") 'magit-status)
 (global-set-key (kbd "C-x R") 'magit-ediff-resolve)
 (global-set-key (kbd "C-c /") 'toggle-comment-on-line)
-(global-set-key (kbd "C-+") 'zoom-frm-in)
-(global-set-key (kbd "C--") 'zoom-frm-out)
 (global-set-key (kbd "C-c f g") 'find-grep)
 (global-set-key (kbd "C-c j") 'avy-goto-subword-1)
 (global-set-key (kbd "C-x o") 'ace-window)
