@@ -16,7 +16,7 @@
  '(org-agenda-files (quote ("~/notes/DOING.org")))
  '(package-selected-packages
    (quote
-    (lsp-mode sbt-mode haskell-mode evil nix-mode zoom-window yasnippet yaml-mode which-key vlf use-package suggest smex smartparens scala-mode nyan-mode multiple-cursors monokai-theme lsp-ui lsp-scala lsp-haskell lcr key-chord idris-mode hydra helm-swoop helm-projectile helm-lsp helm-etags-plus helm-ag git-timemachine git-gutter flycheck-haskell evil-surround evil-mc evil-magit evil-leader eno elmacro dockerfile-mode csv-mode company-lsp ag ace-window)))
+    (dumb-jump lsp-mode sbt-mode haskell-mode evil nix-mode zoom-window yasnippet yaml-mode which-key vlf use-package suggest smex smartparens scala-mode nyan-mode multiple-cursors monokai-theme lsp-ui lsp-scala lsp-haskell lcr key-chord idris-mode hydra helm-swoop helm-projectile helm-lsp helm-etags-plus helm-ag git-timemachine git-gutter flycheck-haskell evil-surround evil-mc evil-magit evil-leader eno elmacro dockerfile-mode csv-mode company-lsp ag ace-window)))
  '(safe-local-variable-values (quote ((python-shell-interpreter . "python3"))))
  '(zoom-window-mode-line-color "DarkGreen"))
 
