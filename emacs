@@ -70,7 +70,9 @@
 (use-package ace-window)
 (use-package avy)
 (use-package csv-mode)
-(use-package dumb-jump)
+(use-package dumb-jump
+  :config (setq dumb-jump-selector 'helm)
+)
 (use-package elmacro)
 (use-package key-chord)
 (use-package smartparens)
