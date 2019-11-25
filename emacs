@@ -82,7 +82,6 @@
 (use-package helm)
 (use-package helm-ag)
 (use-package helm-projectile)
-(use-package helm-etags-plus)
 (use-package helm-swoop)
 (use-package nyan-mode)
 (use-package yasnippet
