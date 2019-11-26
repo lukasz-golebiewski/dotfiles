@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="ys"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -136,4 +136,3 @@ alias move-up="find . -maxdepth 1 -exec mv {} .. \;"
 
 alias run-emacs-daemon="emacs --daemon"
 alias run-emacs-client="emacsclient -c -a emacs"
-
