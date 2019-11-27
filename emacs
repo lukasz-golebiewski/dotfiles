@@ -82,7 +82,7 @@
 (use-package projectile)
 (use-package ag)
 (use-package helm
-  :bind ("C-x C-f" . helm-find-files)
+  :bind ("C-x C-f" . helm-mini)
 )
 (use-package helm-ag)
 (use-package helm-projectile)
@@ -108,6 +108,13 @@
 )
 (use-package nix-mode
   :mode "\\.nix\\'"
+)
+(use-package recentf
+  :ensure t
+  :init (recentf-mode +1)
+  :config (setq recentf-max-saved-items 200
+      recentf-max-menu-items 15
+  )
 )
 
 ;;; global hooks:
