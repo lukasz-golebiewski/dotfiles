@@ -67,7 +67,7 @@
 (use-package avy)
 (use-package csv-mode)
 (use-package dumb-jump
-  :config (setq dumb-jump-selector 'helm)
+  :config (setq dumb-jump-selector 'ivy)
 )
 (use-package elmacro)
 (use-package key-chord)
