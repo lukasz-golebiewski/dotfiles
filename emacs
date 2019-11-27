@@ -5,9 +5,7 @@
 ;;; Code:
 (defvar show-paren-delay)
 (defvar use-package-always-ensure)
-(defvar desktop-restore-eager)
 (defvar tags-revert-without-query)
-(defvar desktop-load-locked-desktop)
 
 (setq
  inhibit-startup-screen t
@@ -19,9 +17,7 @@
  use-package-always-ensure t
  sentence-end-double-space nil
  select-enable-clipboard t
- desktop-restore-eager 5
  tags-revert-without-query t
- desktop-load-locked-desktop t
 )
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
    (when (file-exists-p custom-file)
@@ -124,8 +120,6 @@
 (electric-indent-mode 0)
 (ido-mode 1)
 (global-git-gutter-mode +1)
-;; remember all open files
-(desktop-save-mode 1)
 (show-paren-mode 1)
 (column-number-mode 1)
 (elmacro-mode 1)
@@ -174,7 +168,6 @@
 (global-set-key (kbd "S-C-j") 'shrink-window)
 (global-set-key (kbd "S-C-k") 'enlarge-window)
 (global-set-key (kbd "C-c u") 'undo-tree-visualize)
-(global-set-key (kbd "C-c d") 'desktop-change-dir)
 (global-set-key (kbd "C-c l") 'dumb-jump-go)
 (global-set-key (kbd "C-c h") 'dumb-jump-back)
 ;; helm
