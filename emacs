@@ -78,7 +78,10 @@
 (use-package projectile)
 (use-package ag)
 (use-package helm
-  :bind ("C-x C-f" . helm-mini)
+  :bind (
+    ("C-x C-f" . helm-mini)
+    ("C-x C-d" . helm-find-files)
+  )
 )
 (use-package helm-ag)
 (use-package helm-projectile)
