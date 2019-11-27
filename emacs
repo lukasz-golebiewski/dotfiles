@@ -81,7 +81,9 @@
 (use-package bind-key)
 (use-package projectile)
 (use-package ag)
-(use-package helm)
+(use-package helm
+  :bind ("C-x C-f" . helm-find-files)
+)
 (use-package helm-ag)
 (use-package helm-projectile)
 (use-package helm-swoop)
