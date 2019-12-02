@@ -72,6 +72,7 @@
 )
 (use-package elmacro)
 (use-package eno)
+(use-package fireplace)
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode)
