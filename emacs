@@ -61,22 +61,23 @@
 
 ;;; used packages:
 (use-package smex)
-(use-package magit)
-(use-package git-gutter)
 (use-package ace-window)
+(use-package ag)
 (use-package avy)
+(use-package bind-key)
 (use-package csv-mode)
+(use-package dockerfile-mode)
 (use-package dumb-jump
   :config (setq dumb-jump-selector 'ivy)
 )
 (use-package elmacro)
-(use-package key-chord)
-(use-package smartparens)
-(use-package which-key)
-(use-package undo-tree)
-(use-package bind-key)
-(use-package projectile)
-(use-package ag)
+(use-package eno)
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode)
+)
+(use-package git-gutter)
+(use-package git-timemachine)
 (use-package helm
   :bind (
     ("C-x C-f" . helm-mini)
@@ -86,35 +87,13 @@
 (use-package helm-ag)
 (use-package helm-projectile)
 (use-package helm-swoop)
-(use-package nyan-mode)
-(use-package yasnippet
-  :pin melpa
-)
-(use-package monokai-theme)
-(use-package eno)
-(use-package vlf)
-(use-package markdown-mode)
-(use-package git-timemachine)
-(use-package suggest)
-(use-package dockerfile-mode)
-(use-package zoom-window)
 (use-package hydra)
-(use-package yaml-mode)
 (use-package idris-mode)
-(use-package flycheck
-  :ensure t
-  :init (global-flycheck-mode)
-)
-(use-package nix-mode
-  :mode "\\.nix\\'"
-)
-(use-package recentf
-  :ensure t
-  :init (recentf-mode +1)
-  :config (setq recentf-max-saved-items 200
-      recentf-max-menu-items 15
-  )
-)
+(use-package key-chord)
+(use-package nyan-mode)
+(use-package magit)
+(use-package markdown-mode)
+(use-package monokai-theme)
 (use-package multiple-cursors
   :bind (
     ("C->" . mc/mark-next-like-this)
@@ -122,6 +101,27 @@
     ("C-c C-<" . mc/mark-previous-like-this)
   )
 )
+(use-package nix-mode
+  :mode "\\.nix\\'"
+)
+(use-package projectile)
+(use-package recentf
+  :ensure t
+  :init (recentf-mode +1)
+  :config (setq recentf-max-saved-items 200
+      recentf-max-menu-items 15
+  )
+)
+(use-package smartparens)
+(use-package suggest)
+(use-package undo-tree)
+(use-package vlf)
+(use-package which-key)
+(use-package yaml-mode)
+(use-package yasnippet
+  :pin melpa
+)
+(use-package zoom-window)
 
 ;;; global hooks:
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
