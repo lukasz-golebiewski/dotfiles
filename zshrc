@@ -111,7 +111,6 @@ fi
 ## cabal
 export PATH=$PATH:/opt/cabal/2.2/bin/
 export PATH=$PATH:~/.cabal/bin/
-export PATH=$PATH:~/git/pyrofex/bnfc/source/.cabal-sandbox/bin
 
 ## stack
 export PATH=$PATH:~/.local/bin
