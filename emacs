@@ -213,6 +213,8 @@
 (load "~/.emacs.d/config/init-org.el")
 (load "~/.emacs.d/config/init-scala.el")
 
+(load "~/.emacs.d/extras/ghcid.el")
+
 (provide 'emacs)
 (and window-system (server-start))
 ;;; emacs ends here
