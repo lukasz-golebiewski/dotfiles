@@ -215,6 +215,17 @@
 
 (load "~/.emacs.d/extras/ghcid.el")
 
+(defun zoom-in () (interactive) (zoom '+))
+(defun zoom-out () (interactive) (zoom '-))
+
+(defun zoom (fun)
+  (set-face-attribute 'default nil :height (funcall fun (face-attribute 'default :height) 10))
+)
+
+(global-set-key (kbd "C-+") 'zoom-in)
+(global-set-key (kbd "C-=") 'zoom-in)
+(global-set-key (kbd "C--") 'zoom-out)
+
 (provide 'emacs)
 (and window-system (server-start))
 ;;; emacs ends here
