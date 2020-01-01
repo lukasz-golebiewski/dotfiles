@@ -215,10 +215,11 @@
 
 (load "~/.emacs.d/extras/ghcid.el")
 
-(defun zoom-in () (interactive) (zoom '+))
-(defun zoom-out () (interactive) (zoom '-))
+(defun zoom-in () "Zooms all the frames in." (interactive) (zoom '+))
+(defun zoom-out () "Zooms all the frames out." (interactive) (zoom '-))
 
 (defun zoom (fun)
+  "Helper function. FUN needs to be a binary math function on integers like + or -."
   (set-face-attribute 'default nil :height (funcall fun (face-attribute 'default :height) 10))
 )
 
