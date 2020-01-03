@@ -4,7 +4,7 @@
 ;;; Requires the following values in .dir.locals
 ;;;((nil . (
 ;;;  (eval . (setq nix-shell-default-directory "path/to/dir/with/shell|default.nix"))
-;;;  (eval . (setq ghcid-target "path/to/dir/with/cabal/file"))
+;;;  (eval . (setq ghcid-nix-target "path/to/dir/with/cabal/file"))
 ;;;)))
 (require 'term)
 
@@ -63,7 +63,7 @@ recognize the new height until you manually restart it by calling
 
 ;; TODO Pass in compilation command like compilation-mode
 (defun ghcid-nix-command (h)
-    (format "ghcid-nix -c \"%s\" -h %s\n" (ghcid-nix-cabal-cmd ghcid-nix-target) h))
+    (format "ghcid -c \"%s\" -h %s\n" (ghcid-nix-cabal-cmd ghcid-nix-target) h))
 
 (defun ghcid-nix-get-buffer ()
   "Create or reuse a ghcid-nix buffer with the configured name and
