@@ -30,6 +30,7 @@
   "d" 'lsp-find-definition
   "k" 'kill-buffer
   "gb" 'magit-blame
+  "jd" 'dumb-jump-go-prompt
 )
 
 (evil-mode 1)
