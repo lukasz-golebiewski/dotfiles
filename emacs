@@ -214,6 +214,7 @@
 (load "~/.emacs.d/config/init-scala.el")
 
 (load "~/.emacs.d/extras/ghcid.el")
+(load "~/.emacs.d/extras/ghcid-nix.el")
 
 (defun zoom-in () "Zooms all the frames in." (interactive) (zoom '+))
 (defun zoom-out () "Zooms all the frames out." (interactive) (zoom '-))
