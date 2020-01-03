@@ -58,12 +58,12 @@ recognize the new height until you manually restart it by calling
 (defun ghcid-nix-buffer-name ()
   (concat "*" ghcid-nix-process-name "*"))
 
-(defun ghcid-nix-stack-cmd (target)
+(defun ghcid-nix-cabal-cmd (target)
   (format "cabal new-repl %s" target))
 
 ;; TODO Pass in compilation command like compilation-mode
 (defun ghcid-nix-command (h)
-    (format "ghcid-nix -c \"%s\" -h %s\n" (ghcid-nix-stack-cmd ghcid-nix-target) h))
+    (format "ghcid-nix -c \"%s\" -h %s\n" (ghcid-nix-cabal-cmd ghcid-nix-target) h))
 
 (defun ghcid-nix-get-buffer ()
   "Create or reuse a ghcid-nix buffer with the configured name and
@@ -122,6 +122,5 @@ you ran this command from."
   (interactive)
   (ghcid-nix-kill)
   (kill-buffer (ghcid-nix-buffer-name)))
-
 
 (provide 'ghcid-nix)
