@@ -31,6 +31,7 @@
   "k" 'kill-buffer
   "gb" 'magit-blame
   "gf" 'magit-log-buffer-file ;; Shows history of the current file
+  "gt" 'git-timemachine
   "jd" 'dumb-jump-go-prompt
 )
 
