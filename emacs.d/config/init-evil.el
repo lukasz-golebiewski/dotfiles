@@ -30,6 +30,7 @@
   "d" 'lsp-find-definition
   "k" 'kill-buffer
   "gb" 'magit-blame
+  "gf" 'magit-log-buffer-file ;; Shows history of the current file
   "jd" 'dumb-jump-go-prompt
 )
 
