@@ -7,8 +7,8 @@
   :pin melpa
 )
 
-(use-package flycheck-haskell)
-(add-hook 'haskell-mode-hook #'flycheck-haskell-setup)
+;;(use-package flycheck-haskell)
+;;(add-hook 'haskell-mode-hook #'flycheck-haskell-setup)
 
 (provide 'init-haskell)
 ;;; init-haskell.el ends here
