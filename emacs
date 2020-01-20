@@ -199,7 +199,7 @@
 (key-chord-define-global "df" 'helm-do-ag-project-root)
 (key-chord-define-global "e[" 'replace-regexp)
 (key-chord-define-global "e]" 'projectile-replace-regexp)
-(key-chord-define-global "r[" 'replace)
+(key-chord-define-global "r[" 'replace-string)
 (key-chord-define-global "r]" 'projectile-replace)
 (key-chord-define-global "lm" 'linum-mode)
 
