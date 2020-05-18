@@ -35,6 +35,21 @@
   "jd" 'dumb-jump-go-prompt
 )
 
+;; folds text
+(use-package vimish-fold
+  :pin melpa
+)
+(vimish-fold-global-mode 1)
+(evil-leader/set-key
+  "vf" 'vimish-fold
+  "vd" 'vimish-fold-delete
+  "vD" 'vimish-fold-delete-all
+  "vu" 'vimish-fold-unfold
+  "vU" 'vimish-fold-unfold-all
+  "vt" 'vimish-fold-toggle
+  "vT" 'vimish-fold-toggle-all
+)
+
 (evil-mode 1)
 ;;(key-chord-define evil-insert-state-map  "ff" 'evil-normal-state)
 ;;(global-set-key (kbd "C-c l") 'lsp-ui-peek-find-definitions)
