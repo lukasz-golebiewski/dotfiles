@@ -50,6 +50,9 @@
   "vT" 'vimish-fold-toggle-all
 )
 
+(use-package evil-iedit-state)
+(define-key evil-normal-state-map (kbd "ge") 'evil-iedit-state/iedit-mode)
+
 (evil-mode 1)
 ;;(key-chord-define evil-insert-state-map  "ff" 'evil-normal-state)
 ;;(global-set-key (kbd "C-c l") 'lsp-ui-peek-find-definitions)
