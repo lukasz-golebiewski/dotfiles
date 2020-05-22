@@ -182,6 +182,8 @@
 (global-set-key (kbd "C-c u") 'undo-tree-visualize)
 (global-set-key (kbd "C-c l") 'dumb-jump-go)
 (global-set-key (kbd "C-c h") 'dumb-jump-back)
+(global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
+
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
@@ -190,7 +192,7 @@
 (global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
 (global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
 (global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
-(global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
+(global-set-key (kbd "C-s") 'helm-occur)
 
 ;;; key chords:
 (require 'key-chord)
