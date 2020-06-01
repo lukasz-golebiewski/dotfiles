@@ -231,6 +231,25 @@
 (global-set-key (kbd "C-=") 'zoom-in)
 (global-set-key (kbd "C--") 'zoom-out)
 
+(use-package company
+  :init
+  (setq company-backends '((company-files company-keywords company-capf company-dabbrev-code company-dabbrev company-ispell)))
+  :config
+  (global-company-mode)
+;; (add-to-list 'company-backends 'company-yasnippet)
+  (define-key company-active-map (kbd "C-n") 'company-select-next)
+  (define-key company-active-map (kbd "C-p") 'company-select-previous)
+  :bind ("C-<tab>" . 'company-complete-common-or-cycle)
+)
+;; "aggressive" completion (no delays, quick feedback)
+(setq company-idle-delay 0
+      company-echo-delay 0
+      company-minimum-prefix-length 4
+      company-selection-wrap-around t
+      company-transformers '(company-sort-by-occurrence
+                             company-sort-by-backend-importance))
+(defvar company-dabbrev-downcase nil)
+
 (provide 'emacs)
 (and window-system (server-start))
 ;;; emacs ends here
