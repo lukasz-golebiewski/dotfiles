@@ -122,6 +122,12 @@
 (use-package yaml-mode)
 (use-package yasnippet
   :pin melpa
+  :init
+  (setq yas-snippet-dirs
+      '("~/.emacs.d/snippets")
+  )
+  :config
+  (yas-global-mode 1)
 )
 (use-package zoom-window)
 
