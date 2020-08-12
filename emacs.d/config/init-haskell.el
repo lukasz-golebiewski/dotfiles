@@ -4,7 +4,7 @@
 
 ;;; Code:
 (use-package haskell-mode
-  :init (setq haskell-stylish-on-save t)
+  :init (setq haskell-stylish-on-save 1)
   :pin melpa
 )
 
