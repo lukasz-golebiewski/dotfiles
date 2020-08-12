@@ -68,7 +68,7 @@
 (use-package csv-mode)
 (use-package dockerfile-mode)
 (use-package dumb-jump
-  :config (setq dumb-jump-selector 'ivy)
+  :config (setq dumb-jump-force-searcher 'ag)
 )
 (use-package elmacro)
 (use-package eno)
