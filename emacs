@@ -120,11 +120,16 @@
 (use-package vlf)
 (use-package which-key)
 (use-package yaml-mode)
+(use-package yasnippet-snippets
+  :pin melpa
+)
 (use-package yasnippet
   :pin melpa
   :init
   (setq yas-snippet-dirs
-      '("~/.emacs.d/snippets")
+      '("~/.emacs.d/snippets"
+        "~/.emacs.d/elpa/yasnippet-snippets-20200909.1058/snippets"
+       )
   )
   :config
   (yas-global-mode 1)
