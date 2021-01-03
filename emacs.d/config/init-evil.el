@@ -22,7 +22,7 @@
 
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
-  "e" 'find-file
+  "ff" 'find-file
   "y" 'helm-show-kill-ring
   "u" 'undo-tree-visualize
   "b" 'switch-to-buffer
@@ -34,6 +34,7 @@
   "gt" 'git-timemachine
   "jd" 'dumb-jump-go-prompt
   "hc" 'haskell-cabal-visit-file
+  "er" 'eval-region
 )
 
 ;; folds text
