@@ -33,6 +33,7 @@
   "gf" 'magit-log-buffer-file ;; Shows history of the current file
   "gt" 'git-timemachine
   "jd" 'dumb-jump-go-prompt
+  "hc" 'haskell-cabal-visit-file
 )
 
 ;; folds text
