@@ -218,6 +218,17 @@
 
 (require 'imenu)
 
+(use-package company
+  :init
+  (setq company-backends '((company-files company-keywords company-capf company-dabbrev-code company-dabbrev company-ispell)))
+  :config
+  (global-company-mode)
+;; (add-to-list 'company-backends 'company-yasnippet)
+  (define-key company-active-map (kbd "C-n") 'company-select-next)
+  (define-key company-active-map (kbd "C-p") 'company-select-previous)
+  :bind ("C-<tab>" . 'company-complete-common-or-cycle)
+)
+
 (load "~/.emacs.d/config/init-evil.el")
 (load "~/.emacs.d/config/init-haskell.el")
 (load "~/.emacs.d/config/init-org.el")
@@ -238,16 +249,7 @@
 (global-set-key (kbd "C-=") 'zoom-in)
 (global-set-key (kbd "C--") 'zoom-out)
 
-(use-package company
-  :init
-  (setq company-backends '((company-files company-keywords company-capf company-dabbrev-code company-dabbrev company-ispell)))
-  :config
-  (global-company-mode)
-;; (add-to-list 'company-backends 'company-yasnippet)
-  (define-key company-active-map (kbd "C-n") 'company-select-next)
-  (define-key company-active-map (kbd "C-p") 'company-select-previous)
-  :bind ("C-<tab>" . 'company-complete-common-or-cycle)
-)
+
 ;; "aggressive" completion (no delays, quick feedback)
 (setq company-idle-delay 0
       company-echo-delay 0

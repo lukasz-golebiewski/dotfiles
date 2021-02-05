@@ -5,13 +5,20 @@
 ;; see no evil
 
 ;;; Code:
-(use-package evil)
+(use-package evil
+  :ensure t
+  :init
+  (setq evil-want-keybinding nil)
+  :config
+  (evil-mode 1))
+(use-package evil-collection
+  :after evil
+  :ensure t
+  :config
+  (evil-collection-init 'magit) ;; TODO: fixme, 'magit should not be provided explicitly
+)
 (use-package evil-leader)
 (use-package evil-mc)
-
-(require 'evil)
-(require 'evil-leader)
-
 (global-evil-mc-mode  1) ;; enable
 
 (evil-define-key 'visual evil-mc-key-map
@@ -55,16 +62,9 @@
 (use-package evil-iedit-state)
 (define-key evil-normal-state-map (kbd "ge") 'evil-iedit-state/iedit-mode)
 
-(evil-mode 1)
-;;(key-chord-define evil-insert-state-map  "ff" 'evil-normal-state)
 ;;(global-set-key (kbd "C-c l") 'lsp-ui-peek-find-definitions)
 ;;(global-set-key (kbd "C-c h") 'lsp-ui-peek-jump-backward)
 
-;; optional: this is the evil state that evil-magit will use
-;; (setq evil-magit-state 'normal)
-;; optional: disable additional bindings for yanking text
-;; (setq evil-magit-use-y-for-yank nil)
-(use-package evil-magit)
 (use-package evil-surround)
 (global-evil-surround-mode 1)
 
