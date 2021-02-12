@@ -227,6 +227,7 @@
   (define-key company-active-map (kbd "C-n") 'company-select-next)
   (define-key company-active-map (kbd "C-p") 'company-select-previous)
   :bind ("C-<tab>" . 'company-complete-common-or-cycle)
+  :pin melpa
 )
 
 (load "~/.emacs.d/config/init-evil.el")

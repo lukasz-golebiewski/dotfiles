@@ -13,9 +13,10 @@
   (evil-mode 1))
 (use-package evil-collection
   :after evil
+  :after company
   :ensure t
   :config
-  (evil-collection-init 'magit) ;; TODO: fixme, 'magit should not be provided explicitly
+  (evil-collection-init)
 )
 (use-package evil-leader)
 (use-package evil-mc)
