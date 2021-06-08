@@ -34,8 +34,6 @@
   "y" 'helm-show-kill-ring
   "u" 'undo-tree-visualize
   "b" 'switch-to-buffer
-  "r" 'lsp-find-references
-  "d" 'lsp-find-definition
   "k" 'kill-buffer
   "gb" 'magit-blame
   "gf" 'magit-log-buffer-file ;; Shows history of the current file
@@ -43,6 +41,11 @@
   "jd" 'dumb-jump-go-prompt
   "hc" 'haskell-cabal-visit-file
   "er" 'eval-region
+
+  "lfr" 'lsp-find-references
+  "lfd" 'lsp-find-definition
+  "lrn" 'lsp-rename
+
 )
 
 ;; folds text
