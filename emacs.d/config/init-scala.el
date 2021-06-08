@@ -40,7 +40,9 @@
   ;;       (setq lsp-idle-delay 0.500)
   ;;       (setq lsp-log-io nil)
   ;;       (setq lsp-completion-provider :capf)
-  (setq lsp-prefer-flymake nil))
+  (setq lsp-prefer-flymake nil)
+  (define-key lsp-mode-map (kbd "C-c C-l") lsp-command-map)
+)
 
 ;; Add metals backend for lsp-mode
 (use-package lsp-metals
