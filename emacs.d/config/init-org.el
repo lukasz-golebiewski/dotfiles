@@ -1,3 +1,8 @@
+;;; init-org.el -- Initialize org mode
+
+;;; Commentary:
+
+;;; Code:
 (use-package org)
 
 (global-set-key "\C-cl" 'org-store-link)
@@ -22,3 +27,5 @@
 ;;        "* TODO %?\n  %i\n  %a")
 ;;   ("p" "Pyrofex work" entry (file+datetree "~/org/pyrofex-log.org")
 ;;        "* %? %U")))
+(provide 'init-org)
+;;; init-org.el ends here
