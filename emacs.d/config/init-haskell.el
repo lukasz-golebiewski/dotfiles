@@ -11,5 +11,13 @@
 ;;(use-package flycheck-haskell)
 ;;(add-hook 'haskell-mode-hook #'flycheck-haskell-setup)
 
+(use-package lsp-haskell
+  :pin melpa
+)
+
+(use-package lsp-mode
+    :hook (haskell-mode . lsp-deferred)
+    :commands (lsp lsp-deferred))
+
 (provide 'init-haskell)
 ;;; init-haskell.el ends here
