@@ -231,9 +231,9 @@
 )
 
 (load "~/.emacs.d/config/init-evil.el")
-(load "~/.emacs.d/config/init-haskell.el")
 (load "~/.emacs.d/config/init-org.el")
 (load "~/.emacs.d/config/init-scala.el")
+(load "~/.emacs.d/config/init-haskell.el")
 
 (load "~/.emacs.d/extras/ghcid.el")
 (load "~/.emacs.d/extras/ghcid-nix.el")
