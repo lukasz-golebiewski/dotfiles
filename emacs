@@ -131,7 +131,11 @@
   (yas-global-mode 1)
 )
 (use-package zoom-window)
-
+(use-package plantuml-mode
+  :init
+  (setq plantuml-default-exec-mode 'jar)
+  (setq plantuml-output-type "png")
+)
 ;;; global hooks:
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
