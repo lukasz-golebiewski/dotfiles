@@ -168,8 +168,6 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
-
 ;;(auto-package-update-maybe)
 (require 'vlf-setup)
 (setq line-move-visual nil)
