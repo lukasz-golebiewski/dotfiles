@@ -138,4 +138,6 @@ alias run-emacs-client="emacsclient -c -a emacs"
 
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-export PATH="$PATH:/home/lukasz/.local/share/coursier/bin"
+export PATH="$PATH:/home/lukasz/.local/share/coursier/bin:/home/lukasz/bin"
+
+eval "$(direnv hook zsh)"

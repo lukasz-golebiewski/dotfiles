@@ -263,6 +263,11 @@
                              company-sort-by-backend-importance))
 (defvar company-dabbrev-downcase nil)
 
+(use-package direnv
+ :config
+ (direnv-mode)
+ :pin melpa-stable
+)
 (provide 'emacs)
 (and window-system (server-start))
 ;;; emacs ends here
