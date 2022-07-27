@@ -60,6 +60,11 @@
 (load "~/.emacs.d/config/init-utils.el")
 
 ;;; used packages:
+(use-package direnv
+ :config
+ (direnv-mode)
+ :pin melpa-stable
+)
 (use-package smex)
 (use-package ace-window)
 (use-package ag)
@@ -230,12 +235,6 @@
   (define-key company-active-map (kbd "C-p") 'company-select-previous)
   :bind ("C-<tab>" . 'company-complete-common-or-cycle)
   :pin melpa
-)
-
-(use-package direnv
- :config
- (direnv-mode)
- :pin melpa-stable
 )
 
 (load "~/.emacs.d/config/init-evil.el")
