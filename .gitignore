@@ -10,6 +10,7 @@ sbt/**/metals.sbt
 .emacs.desktop
 !emacs.d
 emacs.d/*
+*.~undo-tree~
 
 !emacs.d/config
 
