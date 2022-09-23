@@ -143,3 +143,5 @@ export PATH="$PATH:/home/lukasz/.local/share/coursier/bin:/home/lukasz/bin"
 eval "$(direnv hook zsh)"
 
 export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
+
+source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
