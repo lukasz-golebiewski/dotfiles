@@ -121,7 +121,9 @@
 )
 (use-package smartparens)
 (use-package suggest)
-(use-package undo-tree)
+(use-package undo-tree
+  :init (setq undo-tree-auto-save-history nil)
+)
 (use-package vlf)
 (use-package which-key)
 (use-package yaml-mode)
