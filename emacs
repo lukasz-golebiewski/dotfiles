@@ -164,8 +164,6 @@
 (nyan-mode 1)
 (yas-global-mode 1)
 
-;; This is bound to f11 in Emacs 24.4
-(toggle-frame-fullscreen)
 ;; prompt only y or no
 (fset `yes-or-no-p `y-or-n-p)
 
