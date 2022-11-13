@@ -4,6 +4,11 @@
 
 ;;; Code:
 ;; if you want to change prefix for lsp-mode keybindings.
+ ;;; Code:
+(use-package haskell-mode
+  :init (setq haskell-stylish-on-save t)
+)
+
 (use-package lsp-mode
   :init
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
