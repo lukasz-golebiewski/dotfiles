@@ -194,8 +194,6 @@
 (global-set-key (kbd "S-C-j") 'shrink-window)
 (global-set-key (kbd "S-C-k") 'enlarge-window)
 (global-set-key (kbd "C-c u") 'undo-tree-visualize)
-(global-set-key (kbd "C-c l") 'dumb-jump-go)
-(global-set-key (kbd "C-c h") 'dumb-jump-back)
 (global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
 
 ;; helm
@@ -218,6 +216,8 @@
 (key-chord-define-global "r[" 'replace-string)
 (key-chord-define-global "r]" 'projectile-replace)
 (key-chord-define-global "lm" 'linum-mode)
+(key-chord-define-global "dl" 'dumb-jump-go)
+(key-chord-define-global "dh" 'dumb-jump-back)
 
 (require 'eno)
 (key-chord-define-global "jk" 'eno-word-goto)
