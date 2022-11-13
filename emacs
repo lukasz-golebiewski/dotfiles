@@ -268,6 +268,9 @@
                              company-sort-by-backend-importance))
 (defvar company-dabbrev-downcase nil)
 
+(setq plantuml-jar-path "~/bin/plantuml.jar")
+(setq plantuml-default-exec-mode 'jar)
+
 (provide 'emacs)
 (and window-system (server-start))
 ;;; emacs ends here
