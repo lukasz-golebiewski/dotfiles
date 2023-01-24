@@ -4,20 +4,19 @@
 
 ;;; Code:
 ;; if you want to change prefix for lsp-mode keybindings.
- ;;; Code:
 (use-package haskell-mode
   :init (setq haskell-stylish-on-save t)
 )
 
 (use-package elm-mode)
+(use-package lsp-haskell) ;; add lsp-haskell explicitly or emacs is going to complain
 
 (use-package lsp-mode
   :init
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq lsp-keymap-prefix "C-c l")
   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-         (haskell-mode . lsp-deferred)
-         (elm-mode . lsp-deferred)
+         ((haskell-mode elm-mode) . lsp-deferred)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp-deferred)
