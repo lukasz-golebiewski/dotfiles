@@ -46,6 +46,9 @@
   "lfd" 'lsp-find-definition
   "lrn" 'lsp-rename
 
+  "oo" 'org-open-at-point
+  "os" 'org-store-link
+  "oi" 'org-insert-link
 )
 
 ;; folds text
