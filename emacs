@@ -85,6 +85,7 @@
 (use-package git-gutter-fringe+)
 
 (use-package git-timemachine)
+(use-package graphviz-dot-mode)
 (use-package helm
   :bind (
     ("C-x C-f" . helm-mini)
